@@ -1,0 +1,23 @@
+.navbar_nav{
+    background-color: #f2cc8f;
+	display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem; 
+	border-bottom: 4px solid #3d405b;
+
+}
+.navbar_nav a{
+	color: #3d405b;
+	padding: 15px;
+	text-decoration: none;
+	font-family: tahoma;
+	font-size: 17px;
+	transition: all .30s linear;
+}
+.navbar_nav a:hover{
+	background-color: #3d405b;
+	color: #f2cc8f;
+}
+.navbar_nav ul{
+    padding-top: 10px;
+}
