@@ -1,7 +1,8 @@
 import SignUp from './Components/SignUpForm';
 import LogIn from './Components/LogInForm';
 import { Routes, Route, Navigate} from "react-router-dom";
-
+import FeedsPage from './FeedsPage';
+import LandingPage from './LandingPage'
 
 function App() {
   return (
