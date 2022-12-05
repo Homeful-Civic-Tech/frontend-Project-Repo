@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.feeds_nav{
+    background-color: #f4f1de;
+	display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem; 
+	border-bottom: 4px solid #f4f1de;
+
+}
+.feeds_nav a{
+	color: #3d405b;
+	padding: 15px;
+	text-decoration: none;
+	font-family: tahoma;
+	font-size: 17px;
+	transition: all .30s linear;
+}
+.feeds_nav a:hover{
+	background-color: #3d405b;
+	color: #f2cc8f;
+}
+.feeds_nav ul{
+    padding-top: 10px;
+}
+body{
+    background-color: #f4f1de;
+	
+}

@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-import './Body.css'
-=======
 import '../CSS/Body.css'
->>>>>>> 9ebc9438deb62bccf8b6cde7eca476e2c3ac7b84
 import Mission from './Mission'
 
 function Body(){

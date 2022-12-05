@@ -1,10 +1,10 @@
 import FeedsPage from './FeedsPage';
-import LandingPage from './LandingPage'
+import LandingPage from './Components/LandingPage.js';
 
 function App() {
   return (
     <div className="App">
-     <LandingPage/>
+     {/* <LandingPage/> */}
      <FeedsPage/>
     </div>
   );
