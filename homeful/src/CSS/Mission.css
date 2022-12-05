@@ -1,7 +1,23 @@
-.discription{
-    color:#f4f1de;
+.discription {
+    color: #f4f1de;
     background-color: #81b29a;
     border-radius: 25px;
-    margin: 30px ;
-   
-} 
+    /* margin: 30px; */
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    width: 21em;
+    margin-left: 5%;
+}
+.button {
+    background-color: #81b29a; 
+    border-color: #f2cc8f;
+    border-radius: 25px;
+    color: #f2cc8f;
+    padding: 15px 32px;
+    margin: 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
