@@ -4,7 +4,11 @@
 .body {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD:homeful/src/Body.css
     background-image: url(http://localhost:3000/static/media/landingpage_handshome.01b6bcdb1899adcf3ed3.png);
+=======
+    background-image: url("../landingpage_handshome.png");
+>>>>>>> 9ebc9438deb62bccf8b6cde7eca476e2c3ac7b84:homeful/src/CSS/Body.css
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
