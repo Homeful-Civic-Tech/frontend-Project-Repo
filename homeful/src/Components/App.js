@@ -2,7 +2,6 @@
 import SignUp from './SignUpForm';
 import LogIn from './LogInForm';
 import { Routes, Route, Navigate} from "react-router-dom";
-// import FeedsPage from './FeedsPage';
  import LandingPage from './LandingPage'
 import AccamodForm from './AccomodForm';
 import RoomAppConfirm from './RoomAppConfirm';
@@ -19,7 +18,6 @@ function App() {
         <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='*' element={<Navigate to='/'/>}/>
      </Routes> 
-     {/* <AccamodForm/> */}
     </div>
   );
 }

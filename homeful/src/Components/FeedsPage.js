@@ -1,6 +1,6 @@
 import React from 'react'
 import FeedsNavbar from './Feedsnav'
-import Search from './search'
+import Search from './Search'
 import PlacestostayButton from './Placetostay'
 import FilterButton from './Filter'
 import Listcard from './Listcard'
