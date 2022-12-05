@@ -1,27 +1,21 @@
-.body{
+/* body{
+    background-color: aqua;
+} */
+.body {
     margin: 0;
     padding: 0;
-    background-image: url("../landingpage_handshome.png");
+    background-image: url(".././landingpage_handshome.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1100px; 
+    height: 100vh;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
 }
 
- .section{
+ /* .section{
     height: 200px;
     width: 50%;
-} 
+}  */
 
-.button {
-    background-color: #81b29a; 
-    border-color: #f2cc8f;
-    border-radius: 25px;
-    color: #f2cc8f;
-    padding: 15px 32px;
-    margin: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
 
