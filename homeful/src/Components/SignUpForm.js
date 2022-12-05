@@ -1,45 +1,35 @@
 import styled from '@emotion/styled'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { Typography } from '@mui/material';
+import Button from '@mui/material/Button';
+ 
 
+const TextHolder = styled('span')({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#E07A5F',
+    width: '100%',
+    height: '25%',
+})
 
-const SUContainer = styled.div`
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  color: white;
-`
+const SUContainer = styled('div')({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    color: 'white',
+    fontFamily: 'Lato'
+})
+  
 
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;
-  background-color: #E07A5F;
-  width: 100%;
-  color: white;
-  height: 25%
-`
+   
 
-const SignUpButton = styled.button`
-    background-color: #95BDB7;
-    color: white;
-    border-style: none;
-    border-radius: 5px;
-    height: 28px;
-    font-size: 15px;
-`
-const FormContainer = styled.form`
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    background-color: #F2CC8F;
-    width: 100%
-    // min-height: 100%
-`
 
 export default function SignUp(){
     const [firstName, setFirstName] = useState('');
@@ -86,34 +76,94 @@ export default function SignUp(){
 
     return (
         <SUContainer>
-            
-            <TextContainer>
+            <TextHolder>
+            <Typography>
                 <h1>Welcome!</h1>
                 <h3>Sign-up below</h3>
-                <img src={require('../IMGs/—Pngtree—simple creative new york city_4111474.png')} alt='img' style={{width:100, height: 100}}/>
-            </TextContainer>
-            
-         <FormContainer onSubmit={(e) => {handleSISubmit(e)}}>
-            <label>First Name:</label>
-            <input type="text" value={firstName} onChange={(e) => {handleFNChange(e)}}></input><br/>
+                <img src={require('../IMGs/—Pngtree—simple creative new york city_4111474.png')} alt='img' style={{width:100, height: 100, paddingLeft: '40px'}}/>
+            </Typography>
+            </TextHolder>
+         <Box 
+         onSubmit={(e) => {handleSISubmit(e)}}
+         sx={{  
+            'display': 'flex',
+            'flexDirection': 'column',
+            'justifyContent': 'center',
+            'alignItems': 'center',
+            'backgroundColor': '#F2CC8F',
+            'width': '100%',
+            'fontFamily': 'Lato',
+            'height':'65vh'
+            }}>
+            <Link style={{textDecoration: 'none', color: 'white', paddingBottom: '25px'}} to='/login'>Already have an account? Click here to login</Link>
+            <TextField
+            required
+            id="outlined-required"
+            label="First Name"
+            placeholder="First name"
+            size="small"
+            value={firstName}
+            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+            onChange={(e) => {handleFNChange(e)}}
+            /><br/>
 
-            <label>Last Name:</label>
-            <input type="text" value={lastName} onChange={(e) => {handleLNChange(e)}}></input><br/>
+            <TextField
+            required
+            id="outlined-required"
+            label="Last Name"
+            placeholder="Last name"
+            size="small"
+            value={lastName}
+            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+            onChange={(e) => {handleLNChange(e)}}
+            /><br/>
 
-            <label>Username:</label>
-            <input type="text" value={userName} onChange={(e) => {handleUSRNChange(e)}}></input><br/>
+           <TextField
+            required
+            id="outlined-required"
+            label="Username"
+            placeholder="Username"
+            size="small"
+            value={userName}
+            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+            onChange={(e) => {handleUSRNChange(e)}}
+            /><br/>
 
-            <label>Email:</label>
-            <input type="email" value={email} onChange={(e) => {handleEMLChange(e)}}></input><br/>
+            <TextField
+            required
+            id="outlined-required"
+            label="Email"
+            placeholder="Email"
+            size="small"
+            value={email}
+            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+            onChange={(e) => {handleEMLChange(e)}}
+            /><br/>
 
-            <label>Password:</label>
-            <input type="password" value={password} onChange={(e) => {handlePSWDChange(e)}}></input><br/>
+            <TextField
+            required
+            id="outlined-required"
+            label="Password"
+            placeholder="Password"
+            size="small"
+            value={password}
+            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+            onChange={(e) => {handlePSWDChange(e)}}
+            /><br/>
 
-            <label>Confirm Password:</label>
-            <input type="password" value={confirmPassword} onChange={(e) => {handleCPChange(e)}}></input><br/>
+            <TextField
+            required
+            id="outlined-required"
+            label="Confirm Password"
+            placeholder="Confirm Password"
+            size="small"
+            value={confirmPassword}
+            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+            onChange={(e) => {handleCPChange(e)}}
+            /><br/>
 
-           <SignUpButton type='submit' className='sign-up-button'><Link to='/login'>Create Account</Link></SignUpButton> 
-         </FormContainer>
+           <Button variant="outlined" size="small" className='back-to-feeds-button' style={{backgroundColor: '#95BDB7', color: 'white', borderStyle: 'none', borderRadius: '5px', height: '28px', fontSize: '15px', fontFamily: 'Lato'}}><Link style={{textDecoration: 'none'}}to='/login'>Create Account</Link></Button> 
+         </Box>
         </SUContainer>
     )
 }

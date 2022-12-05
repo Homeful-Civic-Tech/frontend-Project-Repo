@@ -1,36 +1,47 @@
 import styled from '@emotion/styled'
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { Typography } from '@mui/material';
+import Button from '@mui/material/Button';
 
-const LoginGreeting = styled.div`
-    background-color: #F2CC8F;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 20px;
-    color: white;
-`
 
-const LoginFormContainer = styled.form`
-    background-color: #E07A5F;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    color: white;
-    height: 400px;
-`
+const LoginGreeting = styled('div')({
+    backgroundColor: '#F2CC8F',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    paddingTop: '10px',
+    color: 'white',
+    fontFamily: 'lato'
+})
+   
 
-const LoginButton = styled.button`
-    background-color: #95BDB7;
-    color: white;
-    border-style: none;
-    border-radius: 5px;
-    height: 28px;
-    font-size: 15px;
-`
+const LoginFormContainer = styled('form')({
+    backgroundColor: '#E07A5F',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    color: 'white',
+    height: '400px',
+})
+  
+
+
+const LoginButton = styled('button')({
+    backgroundColor: '#95BDB7',
+    color: 'white',
+    borderStyle: 'none',
+    borderRadius: '5px',
+    height: '28px',
+    fontSize: '15px'
+})
+   
 
 
 
@@ -55,7 +66,6 @@ export default function LogIn(){
 
     return (
         <div className='login-container'>
-            
             <LoginGreeting>
                 <h1>Welcome back!</h1>
                 <h3>Log-in below</h3>
@@ -63,13 +73,31 @@ export default function LogIn(){
             </LoginGreeting>
 
             <LoginFormContainer onSubmit={(e) => {handleLISubmit(e)}}>
-                <label>Enter your username:</label>
-                <input type="text" value={username} onChange={(e) => {handleUsername(e)}}>
-                </input><br/>
-                <label>Enter your password:</label>
-                <input type="password" value={password} onChange={(e) => {handlePassword(e)}}>
-                </input><br/>
-                <LoginButton type='submit' className='login-button'>Log-in</LoginButton>
+                <Typography sx={{'color': 'white'}}>Please login below</Typography>
+
+                <TextField
+                required id="outlined-required"
+                label="Username"
+                placeholder="Username"
+                size="small"
+                value={username}
+                sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+                onChange={(e) => {handleUsername(e)}}
+                /><br/>
+
+                <TextField
+                required
+                id="outlined-required"
+                label="Password"
+                placeholder="Password"
+                size="small"
+                value={password}
+                sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+                onChange={(e) => {handlePassword(e)}}
+                /><br/>
+                
+                <Button variant="outlined" size="small" className='back-to-feeds-button' style={{backgroundColor: '#95BDB7', color: 'white', border: 'white', borderStyle: 'none', borderRadius: '5px', height: '28px',fontSize: '15px'}}><Link to='/' style={{textDecoration: 'none'}}>Log-in</Link></Button>
+
             </LoginFormContainer>
         </div>
     )
