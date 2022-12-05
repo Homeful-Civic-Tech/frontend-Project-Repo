@@ -3,7 +3,7 @@ import SignUp from './SignUpForm';
 import LogIn from './LogInForm';
 import { Routes, Route, Navigate} from "react-router-dom";
 // import FeedsPage from './FeedsPage';
-// import LandingPage from './LandingPage'
+ import LandingPage from './LandingPage'
 import AccamodForm from './AccomodForm';
 import RoomAppConfirm from './RoomAppConfirm';
 

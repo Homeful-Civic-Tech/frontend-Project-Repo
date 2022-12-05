@@ -25,6 +25,7 @@ import "./Listcard.css"
         {shelterName: "lizas family", phone: 88888888, caption: "Time to pour wine", image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg"},
         {shelterName: "kayne", phone: 897543566, caption: "Time to be amazing ", image:"https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg"},
         {shelterName: "sanata", phone: 39897878, caption: "Time to pour layback", image: "https://www.jquery-az.com/html/images/banana.jpg"},
+        {shelterName: "jesus", phone: 111111111, caption: "Time to come to", image: "https://www.jquery-az.com/html/images/banana.jpg"},
         {shelterName: "jesus", phone: 111111111, caption: "Time to come to", image: "https://www.jquery-az.com/html/images/banana.jpg"}]
 
 //connecting to front end from PoSt
