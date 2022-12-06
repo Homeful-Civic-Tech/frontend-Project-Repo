@@ -1,5 +1,5 @@
 import React from "react";
-import './Placetostay.css'/*same stying as placestostay */
+import '../CSS/Placetostay.css'/*same stying as placestostay */
 
 function FilterButton(){
 return (

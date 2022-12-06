@@ -1,5 +1,5 @@
 import React from 'react'
-import './Feedsnav.css'
+import '../CSS/Feedsnav.css'
 
 function FeedsNavbar(){
   return (
