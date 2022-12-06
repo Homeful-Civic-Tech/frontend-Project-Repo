@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import SubmitAcomForm from "./SubmitAcomForm"
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -32,13 +32,16 @@ export default function AccamodForm(){
    const [roomName, setRoomName] =  useState('')
    const [roomAddress, setRoomAddress] = useState('')
    const [roomBio, setRoomBio] = useState('')
+   const [quantity, setQuantity] = useState('')
    const [imgURL, setImgURL] = useState('')
 
-  console.log(roomName, roomAddress, roomBio, imgURL)
    function handleRNChange(e){
     setRoomName(e.target.value)
    }
-
+   function handleQChange(e){
+    let num = Number(e.target.value)
+    setQuantity(num)
+   }
    function handleADChange(e){
     setRoomAddress(e.target.value)
    }
@@ -51,10 +54,26 @@ export default function AccamodForm(){
         setImgURL(e.target.value)
     }
 
-    function handleAppSubmit(e){
-        // e.preventDefault();
-        alert('Success!')
-    }
+   let handleAppSubmit = useEffect(()=>{
+      let raw =JSON.stringify({ 
+        "name":roomName,
+        "bio":roomBio,
+        "location":roomAddress,
+        "url":imgURL,
+        "typeofs":"room",
+        "quantity":+quantity,
+        "userid":1
+       })
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: raw
+    };
+   fetch('http://localhost:4009/rooms/',requestOptions)
+   .then(response => response.json())
+   .then(result => console.log(result))
+   .catch(error => console.log('error', error));
+    })
 
     return(
       <>
@@ -68,7 +87,7 @@ export default function AccamodForm(){
           '& .MuiTextField-root': { m: 1, width: '25ch' },
         }}
         noValidate
-        onSubmit={(e) => handleAppSubmit(e)}
+        onClick={handleAppSubmit}
         autoComplete="off"
       ><br/>
         <div>
@@ -101,6 +120,16 @@ export default function AccamodForm(){
             value={roomBio}
             sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
             onChange={(e) => {handleBioChange(e)}}
+          /><br/>
+          <TextField
+            required
+            id="outlined-required"
+            label="quantity"
+            placeholder="quantity"
+            size="small"
+            value={quantity}
+            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
+            onChange={(e) => {handleQChange(e)}}
           /><br/>
           <TextField
             required

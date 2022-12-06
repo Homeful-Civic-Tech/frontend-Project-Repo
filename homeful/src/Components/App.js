@@ -5,7 +5,7 @@ import { Routes, Route, Navigate} from "react-router-dom";
  import LandingPage from './LandingPage'
 import AccamodForm from './AccomodForm';
 import RoomAppConfirm from './RoomAppConfirm';
-import FeedsPage from '../FeedsPage';
+import FeedsPage from './FeedsPage';
 function App() {
   return (
     <div className="App">
