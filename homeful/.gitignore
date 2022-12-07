@@ -3,6 +3,11 @@
 /node_modules
 /.pnp
 .pnp.js
+/App.js
+/Feedsnav.js
+/Filter.js
+/PLacetostay.js
+
 
 # testing
 /coverage
