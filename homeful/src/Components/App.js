@@ -1,11 +1,12 @@
-
 import SignUp from './SignUpForm';
 import LogIn from './LogInForm';
 import { Routes, Route, Navigate} from "react-router-dom";
- import LandingPage from './LandingPage'
+import LandingPage from './LandingPage'
 import AccamodForm from './AccomodForm';
 import RoomAppConfirm from './RoomAppConfirm';
+import VerifyLogin from './VerifyLogin';
 import FeedsPage from './FeedsPage';
+
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
         <Route path='/login' element={<LogIn/>}/>
         <Route path='/room-form' element={<AccamodForm/>}/>
         <Route path='/room-form/confirmation' element={<RoomAppConfirm/>}/>
+        <Route path='/verify' element={<VerifyLogin/>}/>
         <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='*' element={<Navigate to='/'/>}/>
      </Routes> 

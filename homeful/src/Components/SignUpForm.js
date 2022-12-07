@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Typography } from '@mui/material';
 import Button from '@mui/material/Button';
- 
+import Context from '../Contexts/Context'
+
 
 const TextHolder = styled('span')({
     display: 'flex',
@@ -32,12 +33,12 @@ const SUContainer = styled('div')({
 
 
 export default function SignUp(){
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [userName, setUserName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+    const { firstName, setFirstName } = useContext(Context);
+    const { lastName, setLastName } = useContext(Context);
+    const { userName, setUserName } = useContext(Context);
+    const { email, setEmail } = useContext(Context);
+    const { password, setPassword } = useContext(Context);
+    const { confirmPassword, setConfirmPassword } = useContext(Context);
 
 
     function handleFNChange(e){
@@ -100,6 +101,7 @@ export default function SignUp(){
             required
             id="outlined-required"
             label="First Name"
+            autoComplete="off"
             placeholder="First name"
             size="small"
             value={firstName}
@@ -111,6 +113,7 @@ export default function SignUp(){
             required
             id="outlined-required"
             label="Last Name"
+            autoComplete="off"
             placeholder="Last name"
             size="small"
             value={lastName}
@@ -122,6 +125,7 @@ export default function SignUp(){
             required
             id="outlined-required"
             label="Username"
+            autoComplete="off"
             placeholder="Username"
             size="small"
             value={userName}
@@ -133,6 +137,7 @@ export default function SignUp(){
             required
             id="outlined-required"
             label="Email"
+            autoComplete="off"
             placeholder="Email"
             size="small"
             value={email}
@@ -144,8 +149,10 @@ export default function SignUp(){
             required
             id="outlined-required"
             label="Password"
+            autoComplete="off"
             placeholder="Password"
             size="small"
+            type="password"
             value={password}
             sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
             onChange={(e) => {handlePSWDChange(e)}}
@@ -155,14 +162,16 @@ export default function SignUp(){
             required
             id="outlined-required"
             label="Confirm Password"
+            autoComplete="off"
             placeholder="Confirm Password"
             size="small"
+            type="password"
             value={confirmPassword}
             sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
             onChange={(e) => {handleCPChange(e)}}
             /><br/>
 
-           <Button variant="outlined" size="small" className='back-to-feeds-button' style={{backgroundColor: '#95BDB7', color: 'white', borderStyle: 'none', borderRadius: '5px', height: '28px', fontSize: '15px', fontFamily: 'Lato'}}><Link style={{textDecoration: 'none'}}to='/login'>Create Account</Link></Button> 
+           <Button variant="outlined" size="small" className='back-to-feeds-button' style={{backgroundColor: '#95BDB7', color: 'white', borderStyle: 'none', borderRadius: '5px', height: '28px', fontSize: '15px', fontFamily: 'Lato'}}><Link style={{textDecoration: 'none'}} to='/login'>Create Account</Link></Button> 
          </Box>
         </SUContainer>
     )

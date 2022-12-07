@@ -1,13 +1,45 @@
 import Context from '../Contexts/Context';
 import { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import LogIn from './LogInForm';
+
+
 
 export default function VerifyLogin(){
-    const { username } = useContext(Context)
-    const { password } = useContext(Context)
+    const { userName, setUserName } = useContext(Context)
+    const { password, setPassword } = useContext(Context)
+    console.log(userName, password)
+    const navigate = useNavigate();
+
 
     useEffect(() => {
-        fetch('user/login/:name/:password')
-        .then(res => res.json())
-        .then(data => console.log(data))
-    })
- }
+        async function load(){
+        await fetch(`http://localhost:4009/user/login/${userName}/${password}`)
+        .then(res => {
+            if(!res.ok){
+                throw(res)
+            } else{
+                return res.json()
+            }})
+        .then(data => {
+            if(data.alert === "loged in"){
+                localStorage.setItem("userId",data.data.id);
+                localStorage.setItem("username", data.data.userName);
+                localStorage.setItem("password", data.data.password);
+                navigate('/')
+                setUserName('')
+                setPassword('')
+            } else{
+                alert('Incorrect password or username. Please try again or create an account.')
+                navigate('/login')
+                setUserName('')
+                setPassword('')
+            }
+        })
+    }
+        load()
+    }, [])
+    // return (
+    //     <LogIn/>
+    // )
+}

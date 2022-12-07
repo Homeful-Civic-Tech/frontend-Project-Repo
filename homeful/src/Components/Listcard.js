@@ -4,6 +4,7 @@ import Post from './Post'
  
 export default function App() {
   let [shelters, getNewShelter] = useState([]);
+  
   useEffect(()=>{
    async function load () {
    let cons = await fetch('http://localhost:4009/shelters/')

@@ -8,6 +8,7 @@ const ContextProvider = ({ children }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [verified, setVerification] = useState(0)
 
   const state = {
     firstName,
@@ -21,8 +22,11 @@ const ContextProvider = ({ children }) => {
     password,
     setPassword,
     confirmPassword,
-    setConfirmPassword
+    setConfirmPassword,
+    verified,
+    setVerification
   };
+
   return (
     <Context.Provider value={ state }> 
       {children}
