@@ -1,23 +1,27 @@
 .navbar_nav{
-    background-color: #f2cc8f;
+	background-color: #21b6ae;
 	display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem; 
-	border-bottom: 4px solid #3d405b;
-
-}
-.navbar_nav a{
-	color: #3d405b;
-	padding: 15px;
-	text-decoration: none;
-	font-family: tahoma;
-	font-size: 17px;
-	transition: all .30s linear;
-}
-.navbar_nav a:hover{
-	background-color: #3d405b;
-	color: #f2cc8f;
-}
-.navbar_nav ul{
-    padding-top: 10px;
-}
+	justify-content: space-between;
+	padding: 1rem 2rem; 
+	height:40px;
+	-webkit-box-shadow: 0 4px 6px -6px #222;
+	-moz-box-shadow: 0 4px 6px -6px #222;
+	box-shadow: 0 4px 6px -6px #222;
+  
+  }
+  .navbar_nav a{
+  color: #3d405b;
+  padding: 15px;
+  text-decoration: none;
+  font-family: 'Poppins';
+  transition: all .30s linear;
+  }
+  .navbar_nav a:hover{
+  background-color: #3d405b;
+  color: #f2cc8f;
+  height: 10px;
+  }
+  .navbar_nav ul{
+	padding-top: 2px;
+	margin-top: 6px;
+  }

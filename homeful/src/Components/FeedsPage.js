@@ -1,10 +1,10 @@
 import React from 'react'
 import FeedsNavbar from './Feedsnav'
 import Search from './Search'
-import PlacestostayButton from './Placetostay'
 import FilterButton from './Filter'
-import Listcard from './Listcard'
+import Post from './Listcard'
 import '../CSS/FeedsPage.css'
+
 
 function FeedsPage(){
   return (
@@ -12,11 +12,10 @@ function FeedsPage(){
   <FeedsNavbar/>
   <div className='feedspg'>
   <Search/>
-  <div className='feedsButton' >
-  <PlacestostayButton/> <FilterButton/>
+   <div className='feedsButton' >
+    <FilterButton/> 
   </div>
-  
- <Listcard/>
+    <Post/>
  </div>
 </div>
 )
