@@ -5,7 +5,7 @@ import LandingPage from './LandingPage'
 import AccamodForm from './AccomodForm';
 import RoomAppConfirm from './RoomAppConfirm';
 import VerifyLogin from './VerifyLogin';
-
+import FeedsPage from './FeedsPage';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route path='/room-form' element={<AccamodForm/>}/>
         <Route path='/room-form/confirmation' element={<RoomAppConfirm/>}/>
         <Route path='/verify' element={<VerifyLogin/>}/>
+        <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='*' element={<Navigate to='/'/>}/>
      </Routes> 
     </div>

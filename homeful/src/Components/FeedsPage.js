@@ -4,7 +4,7 @@ import Search from './Search'
 import PlacestostayButton from './Placetostay'
 import FilterButton from './Filter'
 import Listcard from './Listcard'
-import './FeedsPage.css'
+import '../CSS/FeedsPage.css'
 
 function FeedsPage(){
   return (
