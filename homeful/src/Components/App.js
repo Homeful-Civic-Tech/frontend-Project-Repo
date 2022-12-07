@@ -8,7 +8,10 @@ import VerifyLogin from './VerifyLogin';
 import FeedsPage from './FeedsPage';
 import WholeProfile from './WholeProfile';
 
+
+
 function App() {
+  
   return (
     <div className="App">
        {/* <Routes>

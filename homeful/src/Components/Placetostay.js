@@ -1,5 +1,4 @@
 import React from "react";
-// import './Placetostay.css'
 import Button from '@mui/material/Button'
 import HouseIcon from '@mui/icons-material/House';
 import '../CSS/Placetostay.css'
