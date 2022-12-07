@@ -14,7 +14,7 @@ function App() {
   
   return (
     <div className="App">
-       {/* <Routes>
+       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/sign-up' element={<SignUp/>}/>
         <Route path='/login' element={<LogIn/>}/>
@@ -23,10 +23,9 @@ function App() {
         <Route path='/verify' element={<VerifyLogin/>}/>
         <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='*' element={<Navigate to='/'/>}/>
-     </Routes>  */}
-     <WholeProfile/>
+        <Route path = '/Profile' element={<WholeProfile/>}/>
+     </Routes> 
     </div>
   );
 }
-
 export default App;
