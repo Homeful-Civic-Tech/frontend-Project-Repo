@@ -2,6 +2,8 @@ import React from 'react'
 import './Feedsnav.css'
 import Logo from "./logo.png"
 import { Link } from 'react-router-dom'
+import '../CSS/Feedsnav.css'
+
 
 function Navbar(){
   return (

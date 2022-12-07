@@ -1,9 +1,10 @@
 import React from 'react'
 import FeedsNavbar from './Feedsnav'
-import Search from './search'
+import Search from './Search'
 import FilterButton from './Filter'
 import Post from './Listcard'
-import './FeedsPage.css'
+import '../CSS/FeedsPage.css'
+
 
 function FeedsPage(){
   return (

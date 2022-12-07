@@ -7,29 +7,7 @@ import "./Listcard.css"
 
 
 
-// function ListCard(props){
-//   return(
-//     <div> 
-//       <h2 id="shelter-post">{props.caption}</h2>
-//       <h2 id="shelter-phone">{props.phone}</h2>
-//     </div>
-//   )
-// }
-// //creating what goes into each specific post  
-// function Post(props) {
-//     return (
-//    <div id="post">
-//      <div id="overlay">
-//      <img src={props.obj.image} width="200px" height="200px"></img>
-//      <h1 id="shelterName">{props.obj.shelterName}</h1>
-//      <ListCard
-//            phone={props.obj.phone}
-//            caption={props.obj.caption}
-//      />
-//      </div>
-//   </div>
-//  )
-// }
+
 
 function Post(props) {
   return (
@@ -76,8 +54,7 @@ function Post(props) {
         {shelters.map(post => <Post obj={post} key={post.id}/>)}
       </div>
        
-        {/* <ListCard/> */}
-        {/* <PostFeed/> */}
+     
       </div>
     )
   }
