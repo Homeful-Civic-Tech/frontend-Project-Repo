@@ -2,11 +2,13 @@ import React from "react";
 import'../CSS/search.css'
 
 function Search(){
-return (
-    <form class="searchForm">
-    <b><label for="search">Search:</label></b>
-    <input class = "search" type="text" placeholder="Search"/>
-    </form>
-)
-}
+    return (
+      <div class="container">
+      <form class="nosubmit">
+      <input class="nosubmit" type="search" placeholder="Search..."/>
+      </form>
+      </div>  
+    )
+    }
+
 export default Search

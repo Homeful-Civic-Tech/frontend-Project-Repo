@@ -1,0 +1,34 @@
+.post {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+}
+
+.cards{
+  width:320px;
+  margin: 30px 20px;
+}
+.names{
+  font-size: 10px;
+  font-family: 'Poppins';
+  height: 60px;
+  background-color:#66ada9a0;
+  margin: 0 0 ;
+  border-radius: 10px;
+}
+.names h1{
+  position: relative;
+  top: 17px;
+  text-align: center; 
+}
+.location{
+  height:20px;
+  margin-top: 2px;
+  margin: 15px 20px ;
+}
+.img{
+  border-radius: 10px;
+}
+  

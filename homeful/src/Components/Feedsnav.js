@@ -1,16 +1,21 @@
 import React from 'react'
+import Logo from "../IMGs/logo.png"
+import { Link } from 'react-router-dom'
 import '../CSS/Feedsnav.css'
 
-function FeedsNavbar(){
+
+function Navbar(){
   return (
-  <nav className="feeds_nav">
-    <a href="#">logo</a>
-    <ul>
-      <a href="#">UserName</a>
-      <a href="#">Log-out</a>
+  <nav className="navbar_nav">
+    <img src={Logo} alt="" width="100px"/>
+    {/* <Link to="/">{Logo}</Link> */}
+    <ul className="nav_list">
+      <Link to="/">Home</Link>
+      <Link to="/">About us</Link>
+      <Link to="/sign-up">Sign-in/Sign-up</Link>
     </ul>
-  </nav>  
+  </nav>
     )
 }
 
-export default FeedsNavbar 
+export default Navbar 
