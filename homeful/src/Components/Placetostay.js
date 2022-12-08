@@ -1,5 +1,5 @@
 import React from "react";
-import '../CSS/Placetostay.css'
+
 
 function PlacestostayButton(){
 return (
