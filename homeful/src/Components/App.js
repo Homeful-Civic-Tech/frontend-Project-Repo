@@ -6,6 +6,7 @@ import AccamodForm from './AccomodForm';
 import RoomAppConfirm from './RoomAppConfirm';
 import VerifyLogin from './VerifyLogin';
 import FeedsPage from './FeedsPage';
+import ProfilePage from './Profiles';
 
 
 
@@ -21,7 +22,10 @@ function App() {
         <Route path='/room-form/confirmation' element={<RoomAppConfirm/>}/>
         <Route path='/verify' element={<VerifyLogin/>}/>
         <Route path='/feeds' element={<FeedsPage/>}/>
+        <Route path='/feeds/:id' element={<ProfilePage/>}/>
         <Route path='*' element={<Navigate to='/'/>}/>
+        
+
      </Routes> 
     </div>
   );

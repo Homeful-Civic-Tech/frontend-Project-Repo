@@ -34,6 +34,7 @@ function FeedsPage(){
   </div>
   <div className='post'>
         {shelters.map(post => <Post obj={post} key={post.id}/>)}
+        
     </div>
  </div>
 </div>
