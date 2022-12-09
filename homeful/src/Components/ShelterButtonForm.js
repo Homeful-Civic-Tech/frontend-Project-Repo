@@ -45,34 +45,24 @@ export default function ShelterBtn() {
    }
    
     return(
+        <div className="form form--login">
+        <div className="form--heading">Add a Shelter</div>
+        <form autoComplete="off" onSubmit={SumbitForm}>
+            <div className='sign'>
+            
+                <input value={shelterName} type='text' onChange={handleSNChange} placeholder="Shelter name"/>
+                
+                
+                
+                <input value={shelterAddress} type='text' onChange={handleADChange} placeholder="Shelter address" />
         
-        <form onSubmit={SumbitForm} className='add-form' >
-        <div className='form-control'>
-          <label>Add Room Name</label>
-          <input 
-          id ='name'
-          value={shelterName}
-          type='text'
-          onChange={handleSNChange}
             
-          />
-          
-        </div>
-       
-        <div className='form-control'>
-        <label>Add Room location</label>
-          <input
-          value={shelterAddress}
-          id = 'location'
-          type='text'
-          onChange={handleADChange}
-            
-          />
-        </div>
-    
   
-        <input className="button-70" type='submit'/>
+                <button  type='submit' className="button">Submit</button> 
+        </div>
       </form>
+      </div>
+      
       
     )
     

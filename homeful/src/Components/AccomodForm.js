@@ -7,186 +7,226 @@ import * as React from 'react';
 import Navbar from './Navbar'
 // import BackToFeeds from "./BackToFeeds";
 // import { styled } from '@mui/system';
-import RoomButton from './RoomsButtonForm'
-import ShelterButton from './ShelterButtonForm'
-
+import { useNavigate } from 'react-router-dom'; 
+import ShelterAdd from './ShelterButtonForm';
 export default function AccamodForm(){
-  const [showRoom ,setshowRoom] = useState(false)
-  const [showShelter ,setshowShelter] = useState(false)
-  const [title ,setTitle] = useState("Click Which Accommodations You'd Like To Add")
+
+  const navigate = useNavigate();
+  const [showLogin ,setshowLogin] = useState(false)
+  const [showSignin ,setshowSignin] = useState(true)
+  const [roomName, setRoomName] =  useState('')
+  const [roomAddress, setRoomAddress] = useState('')
+  const [roomBio, setRoomBio] = useState('')
+  const [quantity, setQuantity] = useState('')
+  const [imgURL, setImgURL] = useState('')
+  const [phoneNum, setPhoneNum] = useState('')
+  const [category,setCategory] = useState('Must Select option')
 
 
-  const handleRoomSwitch = (e) =>{
-    if(showRoom === false){
-      setshowRoom(!showRoom)
-      setshowShelter(false)
-      setTitle("Click Submit When Your Ready To Add A New Room")
+  const handleLoginSwitch = (e) =>{
+      if(showLogin === false){
+          setshowLogin(!showLogin)
+          setshowSignin(false)
+      
+      }
+      
     }
-    
-  }
-  const handleShelterSwitch = (e) =>{
-    if(showShelter === false)
-    setshowShelter(!showShelter)
-    setshowRoom(false)
-    setTitle("Click Submit When Your Ready To Send Use A New Shelter For Us to Review")
-    
-  }
-
-
-
-  return (
-    <>
-      <Navbar></Navbar>
-      <div className="form">
-        <div id ='inner'>
-        <div className="first-Question">
+    const handleSigninSwitch = (e) =>{
+      if(showSignin === false)
+          setshowSignin(!showSignin)
+          setshowLogin(false)
           
-              <h1 className="title">{title}</h1>
-    
-          <div className="btns">
-            <button className="button-70" onClick={handleShelterSwitch} type="button">Shelter</button>
-            <button className="button-70" onClick={handleRoomSwitch}type="button">Room</button> 
+          
+    }
+ function handleRNChange(e){
+  e.preventDefault()
+  setRoomName(e.target.value)
+ }
+ function handlePNChange(e){
+  e.preventDefault()
+  setPhoneNum(e.target.value)
+ }
+ function handleQChange(e){
+  e.preventDefault()
+  let num =e.target.value
+  setQuantity(+num)
+ }
+ function handleADChange(e){
+  e.preventDefault()
+  setRoomAddress(e.target.value)
+ }
+
+ function handleBioChange(e){
+  e.preventDefault()
+  setRoomBio(e.target.value)
+ }
+
+ function handleURLUpload(e){
+  e.preventDefault()
+      setImgURL(e.target.value)
+  }
+  function handleCChange(e){
+      e.preventDefault()
+      setCategory(e.target.value)
+      }
+
+ let SumbitForm = (e)=>{
+  e.preventDefault();
+  let data = {
+      "name":roomName,
+      "bio":roomBio,
+      "location":roomAddress,
+      "phone_num":phoneNum,
+      "url":imgURL,
+      "quantity":quantity,
+      "category": category
+  }
+
+  let raw = JSON.stringify({ 
+      "name":data.name,
+      "bio":data.bio,
+      "location":data.location,
+      "phone_num":data.phone_num,
+      "url":data.url,
+      "type_of":'room',
+      "quantity":data.quantity,
+      "category":data.category,
+      "userid": 1
+  })
+  const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: raw
+  };
+  fetch('http://localhost:4009/rooms/',requestOptions)
+  .then(response => response.json())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+  navigate('/feeds')
+ }
+ 
+  return(
+      <>
+          <div className="containers">
+              <div className="message signup">
+              <div className="btn-wrapper">
+                  <button onClick = {handleSigninSwitch}className="button" id="signup">
+                  Room
+                  </button>
+                  <button onClick = {handleLoginSwitch} className="button" id="login">
+                  {" "}
+                  Shelter
+                  </button>
+              </div>
+              </div>
+              {showLogin === true && <ShelterAdd />}
+              {showSignin === true &&
+              <div className="form form--signup">
+                  <div className="form--heading">Add a Room</div>
+                  <form autoComplete="off">
+                      <div className='sign'>
+                      <input value={roomName} type='text' onChange={handleRNChange} placeholder="Name of room"/>
+                      <input value={imgURL} type='text'onChange={handleURLUpload} placeholder="Image URL"/>
+                      <input value={phoneNum} type='text'onChange={handlePNChange} placeholder="Phone Number"/>
+                      <input value={roomAddress} type='text' onChange={handleADChange}placeholder="Location" />
+                      <textarea required value={roomBio} id ='bio' onChange={handleBioChange} placeholder="Bio" ></textarea>
+                      <input value={quantity} type='text' onChange={handleQChange} placeholder="How many rooms"/>
+                      <label>Who are you looking to share a room with...</label>
+                      <select  onChange ={handleCChange} value ={category}>
+                          <option value ="Must Select option">Must Select option</option>
+                          <option value ="Female">Female</option>
+                          <option value ="Male">Male</option>
+                          <option value ="Unisex">Unisex</option>
+                          <option value ="Family">Family</option>
+                          <option value ="All">All</option>
+                      </select>
+                      
+                      
+                      <button onClick ={SumbitForm} className="button">Add Room</button>
+                  </div>
+                  </form>
+              </div>}
           </div>
-        </div>
-        <div className="both-form">
-          {showRoom === true && <RoomButton></RoomButton>}
-          {showShelter === true && <ShelterButton></ShelterButton>}
-        </div>
-        </div>
-      </div>
-    </>
-  )
-}
+      </>
 
-// })
-
-
-// export default function AccamodForm(){
-  //  const [roomName, setRoomName] =  useState('')
-  //  const [roomAddress, setRoomAddress] = useState('')
-  //  const [roomBio, setRoomBio] = useState('')
-  //  const [quantity, setQuantity] = useState('')
-  //  const [imgURL, setImgURL] = useState('')
-
-  //  function handleRNChange(e){
-  //   e.preventDefault()
-  //   setRoomName(e.target.value)
-  //  }
-  //  function handleQChange(e){
-  //   e.preventDefault()
-  //   let num = Number(e.target.value)
-  //   setQuantity(num)
-  //  }
-  //  function handleADChange(e){
-  //   e.preventDefault()
-  //   setRoomAddress(e.target.value)
-  //  }
-
-  //  function handleBioChange(e){
-  //   e.preventDefault()
-  //   setRoomBio(e.target.value)
-  //  }
-
-  //  function handleURLUpload(e){
-  //   e.preventDefault()
-  //       setImgURL(e.target.value)
-  //   }
-
-//    let handleAppSubmit = useEffect(()=>{
-//       let raw =JSON.stringify({ 
-//         "name":roomName,
-//         "bio":roomBio,
-//         "location":roomAddress,
-//         "url":imgURL,
-//         "typeofs":"room",
-//         "quantity":+quantity,
-//         "userid":1
-//        })
-//       const requestOptions = {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: raw
-//     };
-//    fetch('http://localhost:4009/rooms/',requestOptions)
-//    .then(response => response.json())
-//    .then(result => console.log(result))
-//    .catch(error => console.log('error', error));
-//     })
-
-//     return(
-//       <>
-//       <Navbar/>
-//       <StyledContainer>
-//       <Typography variant="h5" sx={{'color': 'white', 'fontFamily': 'lato'}}>Adding Room Application</Typography>
-//         <Box
-//         component="form"
-//         sx={{
-//           'backgroundColor': "E07A5F",
-//           '& .MuiTextField-root': { m: 1, width: '25ch' },
-//         }}
-//         noValidate
-//         onClick={handleAppSubmit}
-//         autoComplete="off"
-//       ><br/>
-//         <div>
-//           <TextField
-//             required
-//             id="outlined-required"
-//             label="Name"
-//             placeholder="Name"
-//             size="small"
-//             value={roomName}
-//             sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-//             onChange={(e) => {handleRNChange(e)}}
-//           /><br/>
-//           <TextField
-//             required
-//             id="outlined-required"
-//             label="Address"
-//             value={roomAddress}
-//             placeholder="Address"
-//             size="small"
-//             sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-//             onChange={(e) => {handleADChange(e)}}
-//           /><br/>
-//           <TextField
-//             required
-//             id="outlined-required"
-//             label="Bio"
-//             placeholder="Bio"
-//             size="small"
-//             value={roomBio}
-//             sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-//             onChange={(e) => {handleBioChange(e)}}
-//           /><br/>
-//           <TextField
-//             required
-//             id="outlined-required"
-//             label="quantity"
-//             placeholder="quantity"
-//             size="small"
-//             value={quantity}
-//             sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-//             onChange={(e) => {handleQChange(e)}}
-//           /><br/>
-//           <TextField
-//             required
-//             id="outlined-required"
-//             label="IMG URL"
-//             placeholder="IMG URL"
-//             size="small"
-//             value={imgURL}
-//             sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-//             onChange={(e) => {handleURLUpload(e)}}
-//           /><br/>
-//           <StyledButton>
-//           <BackToFeeds/>
-//           <SubmitAcomForm/>
-//           </StyledButton>
-//           </div>
-//           </Box>
-//           </StyledContainer>
-//           </>
-//         )
-//         }
+  //     <form onSubmit={SumbitForm} className='add-form' >
+  //     <div className='form-control'>
+  //       <label>Add Room Name</label>
+      //   <input 
+      //   id ='name'
+      //   value={roomName}
+      //   type='text'
+      //   onChange={handleRNChange}
+          
+      //   />
         
+  //     </div>
+  //     <div className='form-control'>
+  //     <label>Add Room Url</label>
+  //       <input 
+  //       value={imgURL}
+  //       id ='url'
+  //       type='text'
+  //       onChange={handleURLUpload}
+  //       />
+  //     </div>
+  //     <div className='form-control'>
+  //     <label>Your phone #</label>
+  //       <input
+  //       value={phoneNum}
+  //       id = 'location'
+  //       type='text'
+  //       onChange={handlePNChange}
+          
+  //       />
+  //     </div>
+  //     <div className='form-control'>
+  //     <label>Add Room location</label>
+  //       <input
+  //       value={roomAddress}
+  //       id = 'location'
+  //       type='text'
+  //       onChange={handleADChange}
+          
+  //       />
+  //     </div>
+  //     <div className='form-control'>
+  //     <label>Add Short bio </label>
+  //     <textarea
+  //         required
+  //         value={roomBio}
+  //         id ='bio'
+  //         onChange={handleBioChange}
+  //     ></textarea>
+  
+  //     </div>
+  //     <div className='form-control'>
+  //     <label>Add Quantity </label>
+  //       <input
+  //       value={quantity}
+  //       type='text'
+  //       onChange={handleQChange}
+          
+  //       />
+  //     </div>
+      
+  //     <label>Who are you looking to share a room with...</label>
+  //     <select 
+  //     onChange ={handleCChange}
+  //     value ={category}
+  //     >
+  //         <option value ="Must Select option">Must Select option</option>
+  //         <option value ="Female">Female</option>
+  //         <option value ="Male">Male</option>
+  //         <option value ="Unisex">Unisex</option>
+  //         <option value ="Family">Family</option>
+  //         <option value ="All">All</option>
+  //     </select>
+  
+
+  //     <input className="button-70" type='submit'/>
+  //   </form>
+    
+  )
+
+}

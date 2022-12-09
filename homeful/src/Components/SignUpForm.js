@@ -6,6 +6,7 @@ import LogIn from './Login';
 
 
 
+
 export default function SignUpLogIn(){
     const [showLogin ,setshowLogin] = useState(false)
     const [showSignin ,setshowSignin] = useState(true)
@@ -104,7 +105,7 @@ export default function SignUpLogIn(){
     
     return (
         <>
-            <div className="container">
+            <div className="containers">
                 <div className="message signup">
                 <div className="btn-wrapper">
                     <button onClick = {handleSigninSwitch}className="button" id="signup">
@@ -121,6 +122,7 @@ export default function SignUpLogIn(){
                 <div className="form form--signup">
                     <div className="form--heading">Welcome! Sign Up</div>
                     <form autoComplete="off">
+                        <div className='sign'>
                         <input value={firstName} onChange={handleFNChange} type="text" placeholder="First Name" />
                         <input value={lastName} onChange={handleLNChange} type="text" placeholder="Last Name" />
                         <input value={userName} onChange={handleUSRNChange} type="text" placeholder="Username" />
@@ -131,6 +133,7 @@ export default function SignUpLogIn(){
                         
                         
                         <button onClick ={handleSISubmit} className="button">Sign Up</button>
+                    </div>
                     </form>
                 </div>}
             </div>

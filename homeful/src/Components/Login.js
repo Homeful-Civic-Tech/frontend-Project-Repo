@@ -30,23 +30,28 @@ export default function LogIn (){
                 .then(result => result.json())
                 .then(datas => handleLoginChange(datas))
         if(login.alert === 'loged in'){
+            localStorage.setItem("userId",login.data.id);
+            localStorage.setItem("username", login.data.username);
+            localStorage.setItem("password", login.data.password);
             navigate('/feeds')
-        }
-
-            
+        }   
         }
     
    
 
 
     return(
+        
         <div className="form form--login">
         <div className="form--heading">Welcome back! </div>
         <form autoComplete="off" onSubmit= {handleSISubmit}>
+            <div className='sign'>
             <input value={userName} onChange = {handleUSRNChange}type="text" placeholder="Username" />
             <input value={password} onChange = {handlePSWDChange}type="password" placeholder="Password" />
-            <button  type='submit' className="button">Login</button>
+            <button  type='submit' className="button">Login</button> 
+            </div>
         </form>
         </div>
+       
     )
 }
