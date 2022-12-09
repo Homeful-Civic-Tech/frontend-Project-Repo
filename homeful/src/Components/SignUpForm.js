@@ -1,45 +1,40 @@
-import styled from '@emotion/styled'
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import { Typography } from '@mui/material';
-import Button from '@mui/material/Button';
-import Context from '../Contexts/Context'
+import { useState } from 'react';
+import "../CSS/Sign.css"
+import LogIn from './Login';
 
 
-const TextHolder = styled('span')({
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#E07A5F',
-    width: '100%',
-    height: '25%',
-})
-
-const SUContainer = styled('div')({
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    color: 'white',
-    fontFamily: 'Lato'
-})
-  
-
-   
 
 
-export default function SignUp(){
-    const { firstName, setFirstName } = useContext(Context);
-    const { lastName, setLastName } = useContext(Context);
-    const { userName, setUserName } = useContext(Context);
-    const { email, setEmail } = useContext(Context);
-    const { password, setPassword } = useContext(Context);
-    const { confirmPassword, setConfirmPassword } = useContext(Context);
+export default function SignUpLogIn(){
+    const [showLogin ,setshowLogin] = useState(false)
+    const [showSignin ,setshowSignin] = useState(true)
+    const [firstName, setFirstName]= useState('');
+    const [lastName, setLastName] = useState('');
+    const [userName, setUserName] = useState('');
+    const [email, setEmail]= useState('');
+    const [password, setPassword] = useState('');
+    const [sex, setSex] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
+    
+    
+      const handleLoginSwitch = (e) =>{
+        if(showLogin === false){
+            setshowLogin(!showLogin)
+            setshowSignin(false)
+        
+        }
+        
+      }
+      const handleSigninSwitch = (e) =>{
+        if(showSignin === false)
+            setshowSignin(!showSignin)
+            setshowLogin(false)
+            
+            
+      }
+    
 
     function handleFNChange(e){
         setFirstName(e.target.value)
@@ -65,114 +60,82 @@ export default function SignUp(){
         setConfirmPassword(e.target.value)
     }
 
+    function handleSEXChange (e){
+        setSex(e.target.value)
+    }
+//firstname,lastname,username,email,sex,password}
     function handleSISubmit(e){
         if(password !== confirmPassword){
             e.preventDefault();
             alert('Passwords do not match')
         } else {
+            let data = {
+                "firstname":firstName,
+                "lastname":lastName,
+                "username":userName,
+                "email":email,
+                "sex":sex,
+                "password":password
+            }
+        
+            let raw = JSON.stringify({ 
+                "firstname":data.firstname,
+                "lastname":data.lastname,
+                "username":data.username,
+                "email":data.email,
+                "sex":data.sex,
+                "password":data.password
+            })
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: raw
+            };
+            fetch('http://localhost:4009/user/',requestOptions)
+            .then(response => response.json())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
             console.log("You've succesfully signed up.")
-            // e.preventDefault();
+            
+            handleLoginSwitch()
         }
     }
-
+    
+    
     return (
-        <SUContainer>
-            <TextHolder>
-            <Typography>
-                <h1>Welcome!</h1>
-                <h3>Sign-up below</h3>
-                <img src={require('../IMGs/—Pngtree—simple creative new york city_4111474.png')} alt='img' style={{width:100, height: 100, paddingLeft: '40px'}}/>
-            </Typography>
-            </TextHolder>
-         <Box 
-         onSubmit={(e) => {handleSISubmit(e)}}
-         sx={{  
-            'display': 'flex',
-            'flexDirection': 'column',
-            'justifyContent': 'center',
-            'alignItems': 'center',
-            'backgroundColor': '#F2CC8F',
-            'width': '100%',
-            'fontFamily': 'Lato',
-            'height':'65vh'
-            }}>
-            <Link style={{textDecoration: 'none', color: 'white', paddingBottom: '25px'}} to='/login'>Already have an account? Click here to login</Link>
-            <TextField
-            required
-            id="outlined-required"
-            label="First Name"
-            autoComplete="off"
-            placeholder="First name"
-            size="small"
-            value={firstName}
-            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-            onChange={(e) => {handleFNChange(e)}}
-            /><br/>
+        <>
+            <div className="container">
+                <div className="message signup">
+                <div className="btn-wrapper">
+                    <button onClick = {handleSigninSwitch}className="button" id="signup">
+                    Sign Up
+                    </button>
+                    <button onClick = {handleLoginSwitch} className="button" id="login">
+                    {" "}
+                    Login
+                    </button>
+                </div>
+                </div>
+                {showLogin === true && <LogIn />}
+                {showSignin === true &&
+                <div className="form form--signup">
+                    <div className="form--heading">Welcome! Sign Up</div>
+                    <form autoComplete="off">
+                        <input value={firstName} onChange={handleFNChange} type="text" placeholder="First Name" />
+                        <input value={lastName} onChange={handleLNChange} type="text" placeholder="Last Name" />
+                        <input value={userName} onChange={handleUSRNChange} type="text" placeholder="Username" />
+                        <input value={email} onChange={handleEMLChange} type="email" placeholder="Email" />
+                        <input value={sex} onChange={handleSEXChange} type="text" placeholder="Sex" />
+                        <input value={password} onChange={handlePSWDChange} type="password" placeholder="Password" />
+                        <input value={confirmPassword} onChange={handleCPChange} type="password" placeholder="Confirm Password" />
+                        
+                        
+                        <button onClick ={handleSISubmit} className="button">Sign Up</button>
+                    </form>
+                </div>}
+            </div>
+        </>
 
-            <TextField
-            required
-            id="outlined-required"
-            label="Last Name"
-            autoComplete="off"
-            placeholder="Last name"
-            size="small"
-            value={lastName}
-            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-            onChange={(e) => {handleLNChange(e)}}
-            /><br/>
-
-           <TextField
-            required
-            id="outlined-required"
-            label="Username"
-            autoComplete="off"
-            placeholder="Username"
-            size="small"
-            value={userName}
-            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-            onChange={(e) => {handleUSRNChange(e)}}
-            /><br/>
-
-            <TextField
-            required
-            id="outlined-required"
-            label="Email"
-            autoComplete="off"
-            placeholder="Email"
-            size="small"
-            value={email}
-            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-            onChange={(e) => {handleEMLChange(e)}}
-            /><br/>
-
-            <TextField
-            required
-            id="outlined-required"
-            label="Password"
-            autoComplete="off"
-            placeholder="Password"
-            size="small"
-            type="password"
-            value={password}
-            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-            onChange={(e) => {handlePSWDChange(e)}}
-            /><br/>
-
-            <TextField
-            required
-            id="outlined-required"
-            label="Confirm Password"
-            autoComplete="off"
-            placeholder="Confirm Password"
-            size="small"
-            type="password"
-            value={confirmPassword}
-            sx={{'color': 'white', 'fontFamily': 'lato', 'size': 'small', 'backgroundColor': 'white'}}
-            onChange={(e) => {handleCPChange(e)}}
-            /><br/>
-
-           <Button variant="outlined" size="small" className='back-to-feeds-button' style={{backgroundColor: '#95BDB7', color: 'white', borderStyle: 'none', borderRadius: '5px', height: '28px', fontSize: '15px', fontFamily: 'Lato'}}><Link style={{textDecoration: 'none'}} to='/login'>Create Account</Link></Button> 
-         </Box>
-        </SUContainer>
+      
     )
 }
