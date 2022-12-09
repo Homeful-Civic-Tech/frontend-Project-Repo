@@ -1,5 +1,4 @@
 import React from 'react'
-import '../CSS/Feedsnav.css'
 import Logo from "../IMGs/logo.png"
 import { Link } from 'react-router-dom'
 import '../CSS/Feedsnav.css'

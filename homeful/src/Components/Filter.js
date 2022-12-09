@@ -1,10 +1,8 @@
 import React from "react";
-
-
 import Button from '@mui/material/Button'
 import FilterListIcon from '@mui/icons-material/FilterList';
 import PlacestostayButton from './Placetostay'
-import '../CSS/Placetostay.css'/*same stying as placestostay */
+
 
 
 function FilterButton(){

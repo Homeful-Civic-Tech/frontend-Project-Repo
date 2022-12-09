@@ -1,13 +1,13 @@
 import React from 'react'
 import '../CSS/Mission.css'
-// import './CSS/Mission.css'
+
 
 function Mission(){
   return (
         <section className='mission'>
             <h1 className='discription'> Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
             </h1>
-            <button className = 'button' type="button">Sign Up</button>
+            <button className = 'buttons' type="button">Sign Up</button>
          </section>
     )
 }
