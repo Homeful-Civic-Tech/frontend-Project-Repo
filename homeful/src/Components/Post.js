@@ -1,6 +1,5 @@
 // import * as React from 'react';
 import Button from '@mui/material/Button'
-import ProfilePage from './Profiles';
 import { useNavigate, Link } from "react-router-dom";
 //  import React from "react"
 import "../CSS/Post.css"

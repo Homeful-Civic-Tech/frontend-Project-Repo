@@ -1,0 +1,55 @@
+.images{
+    width:350px;
+    height:300px;
+    border-radius: 10px;
+}
+.display{
+    height: 350px;
+    width: 600px;
+    padding: 0px;
+    margin-top: 20px;
+    margin-right: 0px ;
+
+}
+
+.desc{
+    width: 650px;
+    border: 1px solid black;
+    margin: 0px 400px;
+    z-index: 400 !important;
+    -ms-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    position: absolute; /* added */
+    top: 100px; /* added */
+    left: 5%; /* added */
+    padding: 10px;
+
+}
+
+.all{
+    width: 400px;
+   height: 500px;
+   border: 1px solid black;
+   margin-top: 20px;
+   border-radius: 10px;
+   text-align: center;
+}
+
+.reserve{
+    border: 1px solid black;
+    width: 400px;
+    margin: 0px 400px;
+    z-index: 400 !important;
+    -ms-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    position: absolute; /* added */
+    top: 370px; /* added */
+    left: 10%; /* added */
+    padding: 10px;
+}

@@ -12,33 +12,33 @@ export default function VerifyLogin(){
     const navigate = useNavigate();
 
 
-    useEffect(() => {
-        async function load(){
-        await fetch(`http://localhost:4009/user/login/${userName}/${password}`)
-        .then(res => {
-            if(!res.ok){
-                throw(res)
-            } else{
-                return res.json()
-            }})
-        .then(data => {
-            if(data.alert === "loged in"){
-                localStorage.setItem("userId",data.data.id);
-                localStorage.setItem("username", data.data.userName);
-                localStorage.setItem("password", data.data.password);
-                navigate('/')
-                setUserName('')
-                setPassword('')
-            } else{
-                alert('Incorrect password or username. Please try again or create an account.')
-                navigate('/login')
-                setUserName('')
-                setPassword('')
-            }
-        })
-    }
-        load()
-    }, [])
+    // useEffect(() => {
+    //     async function load(){
+    //     await fetch(`http://localhost:4009/user/login/${userName}/${password}`)
+    //     .then(res => {
+    //         if(!res.ok){
+    //             throw(res)
+    //         } else{
+    //             return res.json()
+    //         }})
+    //     .then(data => {
+    //         if(data.alert === "loged in"){
+    //             localStorage.setItem("userId",data.data.id);
+    //             localStorage.setItem("username", data.data.userName);
+    //             localStorage.setItem("password", data.data.password);
+    //             navigate('/')
+    //             setUserName('')
+    //             setPassword('')
+    //         } else{
+    //             alert('Incorrect password or username. Please try again or create an account.')
+    //             navigate('/login')
+    //             setUserName('')
+    //             setPassword('')
+    //         }
+    //     })
+    // }
+    //     load()
+    // }, [])
     // return (
     //     <LogIn/>
     // )

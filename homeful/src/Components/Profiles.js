@@ -1,36 +1,22 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Carousel from 'react-material-ui-carousel';
+
 // import Post from './Post.js'
 // import Button from '@mui/material/Button'
 // import Paper from '@mui/material/Paper'
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
+import ProfileInfo from './ProfileInfo';
 
 
-function Carousell(props) {
-  
 
-    return (
-        <Carousel>
-            {/* {shelters.map((item, i) => (<Item key={i} {...url} /> ))} */}
-        </Carousel>
-    );
-}
 
-// const Item = ({ url, location, shelter_name, num_phone}) => {
-//     return (
-//         <Paper>
-//             <h2></h2>
-//             <p></p>
-//             <Button>more info...</Button>
-//         </Paper>
-//     );
-// };
 
 function ProfilePage (){
-    let [eachShelter, getShelters] = useState("");
-    let {id} = useParams()
+  let [eachShelter, getShelters] = useState([]);
+  let {id} = useParams()
+
+  // console.log(id)
 
     useEffect(()=>{
      async function allShelters () {
@@ -41,23 +27,21 @@ function ProfilePage (){
         }
         throw response
       })
-      getShelters(info)
+      getShelters(info[0])
+      // console.log(info[0])
+     
     }
       allShelters()
   
     },[id])
-    
-    console.log(eachShelter[0].shelter_name)
+
     
     return (
         <div>
             <Navbar/>
-            <Carousell/>
+            <ProfileInfo myData={eachShelter}/>
+
            
-          
-            
-
-
         </div>
     )
 }

@@ -102,7 +102,7 @@ export default function LogIn(){
                 onChange={(e) => {handlePassword(e)}}
                 /><br/>
                 
-                <Button type="submit" variant="outlined" size="small" className='back-to-feeds-button' style={{backgroundColor: '#95BDB7', color: 'white', border: 'white', borderStyle: 'none', borderRadius: '5px', height: '28px',fontSize: '15px'}}>Log-in
+                <Button onClick={() => navigate('/feeds')} type="submit" variant="outlined" size="small" className='back-to-feeds-button' style={{backgroundColor: '#95BDB7', color: 'white', border: 'white', borderStyle: 'none', borderRadius: '5px', height: '28px',fontSize: '15px'}}>Log-in
                 </Button>
             </LoginFormContainer>
         </div>
