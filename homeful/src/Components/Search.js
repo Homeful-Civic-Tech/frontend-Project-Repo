@@ -3,9 +3,9 @@ import'../CSS/search.css'
 
 function Search(){
     return (
-      <div class="container">
-      <form class="nosubmit">
-      <input class="nosubmit" type="search" placeholder="Search..."/>
+      <div className="container">
+      <form className="nosubmit">
+      <input className="nosubmit" type="search" placeholder="Search..."/>
       </form>
       </div>  
     )

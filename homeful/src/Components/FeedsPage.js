@@ -18,7 +18,7 @@ function FeedsPage(){
       }
       throw response
     })
-    console.log(info)
+    
     getShelters(info)
   }
     allShelters()
