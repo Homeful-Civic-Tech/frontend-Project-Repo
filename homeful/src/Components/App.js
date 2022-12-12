@@ -8,12 +8,10 @@ import VerifyLogin from './VerifyLogin';
 import FeedsPage from './FeedsPage';
 import WholeProfile from './WholeProfile';
 
-
-
 function App() {
-  
   return (
     <div className="App">
+      {/* <PostReview/> */}
        <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/sign-up' element={<SignUp/>}/>
