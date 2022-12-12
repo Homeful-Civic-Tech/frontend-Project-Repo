@@ -64,7 +64,7 @@ export default function SignUpLogIn(){
     function handleSEXChange (e){
         setSex(e.target.value)
     }
-//firstname,lastname,username,email,sex,password}
+
     function handleSISubmit(e){
         if(password !== confirmPassword){
             e.preventDefault();

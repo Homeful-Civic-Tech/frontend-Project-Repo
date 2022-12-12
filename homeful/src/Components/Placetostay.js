@@ -2,10 +2,6 @@ import React from "react";
 import Button from '@mui/material/Button'
 import HouseIcon from '@mui/icons-material/House';
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cc5fb8a3a466b01ef5614b8b56a31c581fcff169
 
 
 function PlacestostayButton(){
