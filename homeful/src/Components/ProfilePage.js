@@ -24,7 +24,7 @@ function PostFeed() {
     let [shelters, getShelters] = useState([]);
     useEffect(()=>{
      async function UserShelters () {
-     let info = await fetch('http://localhost:4009/shelters/user/1')
+     let info = await fetch('http://localhost:4009/shelters/user/2')
       .then(response => {
         if (response.ok){
           return response.json()
