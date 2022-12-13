@@ -9,14 +9,10 @@
     "@emotion/styled": "^11.10.5",
     "@fontsource/lato": "^4.5.10",
     "@mui/icons-material": "^5.10.16",
-<<<<<<< HEAD
     "@mui/lab": "^5.0.0-alpha.111",
     "@mui/material": "^5.10.16",
     "@react-navigation/native": "^6.1.0",
     "@react-navigation/native-stack": "^6.9.5",
-=======
-    "@mui/material": "^5.10.17",
->>>>>>> cc5fb8a3a466b01ef5614b8b56a31c581fcff169
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
