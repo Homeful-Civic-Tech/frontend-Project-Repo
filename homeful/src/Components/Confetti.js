@@ -17,6 +17,7 @@ export default function ConfettiAnim(){
         <ReactConfetti 
         width={windowSize.width}
         height={windowSize.height}
-        tweenDuration={1000}/>
+        tweenDuration={1000}
+        run={true}/>
     )
 }

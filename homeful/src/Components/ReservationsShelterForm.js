@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "../CSS/ReservingShelterForm.css"
+import ReservationConfirmation from './ReservationsConfirmation'
+
 
 export default function ReservingAShelterForm(){
   const [ firstname, updateFNChange ] = useState('')
@@ -10,38 +12,65 @@ export default function ReservingAShelterForm(){
   const [ gender, updateGenderChange ] = useState('')
   const [ email, updateEMLChange ] = useState('')
   const [ additionalInfoText, updateAITChange ] = useState('')
+  const [showReservForm, setReservForm] = useState(true)
+  const [showConf, setConf] = useState(false)
+  // const [message, setMessage] = useState({fn: '', ln: '', gndr: '', eml: ''})
+  
 
+function handleSubmit(e){
+  e.preventDefault()
+  const emlRegex = /^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,6}$/
+  
+  if(firstname.length < 2){
+      alert('First name input cannot be less than 2 char')
+  } else if(lastname.length < 2 ){
+    alert('Last name input cannot be less than 2 char')
+  } else if(!emlRegex.test(email)){
+    alert('Email input is invalid.')
+  } else if(!gender) {
+    alert('Please select a gender')
+  } else{
+    setReservForm(false)
+    setConf(true)
+  }
+}
 
 return (
+  <>
+  {showConf && <ReservationConfirmation/>}
+  {showReservForm && 
   <div className="rsf-container">
    <div className="form-container">
     <h1 className='header-text'>Enter your details below</h1>
+    <form className='form-reserv' onSubmit={handleSubmit} >
 
-    <form className='form'>
-        <label className='fn-q'>First Name:
-        <input type="text" name="firstName" value={firstname} required onChange={(e) => {updateFNChange(e.target.value)}}/></label>
+        <input type="text" name="firstName" placeholder="First Name"  autoComplete="off" value={firstname} required onChange={(e) => {updateFNChange(e.target.value)}}/>
 
-        <label className='ln-q'>Last Name:
-        <input type="text" name="lastName" value={lastname} required onChange={(e) => {updateLNChange(e.target.value)}}/></label>
+        <input type="text" placeholder="Last Name" name="lastName" value={lastname}  autoComplete="off" required onChange={(e) => {updateLNChange(e.target.value)}}/>
 
-        <label className='eml-q'>Email:
-        <input type="text" name="email" value={email} required onChange={(e) => {updateEMLChange(e.target.value)}}/></label>
+  
+        <input type="text" placeholder="Email" name="email" value={email}  autoComplete="off" required onChange={(e) => {updateEMLChange(e.target.value)}}/>
 
-        <label className='g-q'>Gender:
-        <input type="radio" name="gender" value="female"  onChange={(e) => {updateGenderChange(e.target.value)}}/>Female
+      <div className="gender-container">
+        <label className='g-q'>Gender:</label>  
+        <input type="radio" name="gender" value="female" id='female' style={{display:'inline'}} onChange={(e) => {updateGenderChange(e.target.value)}}/>
+        <label htmlFor='female'>Female</label>
 
-        <input type="radio" name="gender" value="male"  onChange={(e) => {updateGenderChange(e.target.value)}}/>Male
+        <input type="radio" name="gender" value="male" id='male' onChange={(e) => {updateGenderChange(e.target.value)}}/>
+        <label htmlFor='male'>Male</label>
 
-        <input type="radio" name="gender" value="nonBinary"  onChange={(e) => {updateGenderChange(e.target.value)}}/>Non-Binary</label>
+        <input type="radio" name="gender" value="nonBinary" id='nonBinary' onChange={(e) => {updateGenderChange(e.target.value)}}/>
+        <label htmlFor='nonBinary'>Non-Binary</label>
+        </div>
 
-        <label className='text-box'>Anything you'd like to let us know?</label>
-        <input type="text" value={additionalInfoText} onChange={(e) => updateAITChange(e.target.value)}/><br/>
-    
+        <input type="text" placeholder="Anything you'd like to let us know?" value={additionalInfoText} onChange={(e) => updateAITChange(e.target.value)}/><br/>
+      
+      <div className="button-submit">
+      <button type="submit" className="submitReservation">Book Reservation</button>
+      </div>
     </form>
-      <Button type="submit" variant="outlined" size="small" className="submitReservation">Book Reservation</Button>
-      {gender && <Link to='/reservations/confirmation' style={{textDecoration: 'none'}}>     
-      </Link>}
     </div>
-    </div>
+    </div>}
+    </>
   )
 }

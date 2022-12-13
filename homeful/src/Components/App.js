@@ -8,8 +8,8 @@ import VerifyLogin from './VerifyLogin';
 import FeedsPage from './FeedsPage';
 import ProfilePage from './ProfilePage'
 import WholeProfile from './WholeProfile';
-
-
+import ReservationsContainer from './ReservationsContainer'
+import ReservationConfirmation from './ReservationsConfirmation'
 
 function App() {
   
@@ -21,11 +21,13 @@ function App() {
         <Route path='/login' element={<LogIn/>}/>
         <Route path='/room-form' element={<AccamodForm/>}/>
         <Route path='/room-form/confirmation' element={<RoomAppConfirm/>}/>
+        <Route path='/shelter-form' element={<ReservationsContainer/>}/>
+        <Route path='/shelter-form/confirmation' element={<ReservationConfirmation/>}/>
         <Route path='/verify' element={<VerifyLogin/>}/>
         <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='/feeds/:id' element={<ProfilePage/>}/>
-        <Route path='*' element={<Navigate to='/'/>}/>
         <Route path = '/Profile' element={<WholeProfile/>}/>
+        <Route path='*' element={<Navigate to='/'/>}/>
      </Routes> 
     </div>
   );
