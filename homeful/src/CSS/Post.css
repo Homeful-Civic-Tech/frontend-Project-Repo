@@ -1,34 +1,69 @@
+.Post{
+  text-decoration: none;
+
+
+}
+
 .post {
   display: flex; 
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
   justify-content: center;
+
 }
 
-.cards{
-  width:320px;
-  margin: 30px 20px;
+.cardss{
+
+  width: 250px;
+  margin: 10px 15px;
+  background-color: #00274E;
+  border-radius: 30px;
+  
 }
-.names{
+.shelter_name{
   font-size: 10px;
   font-family: 'Poppins';
-  height: 60px;
-  background-color:#66ada9a0;
+  height:30px;
   margin: 0 0 ;
-  border-radius: 10px;
 }
-.names h1{
+.line{
+  height: 0.1px;
+  box-shadow: white 0px 0px 1px;
+  width: 50%;
+  margin-left: 60px;;
+  margin-top: 20px;
+  background-color: white;
+ 
+}
+.shelter_name h1{
   position: relative;
-  top: 17px;
+  top: 5pxx;
   text-align: center; 
+  color: white;
+  font-size: 15px;
+  /* color: black; */
 }
 .location{
   height:20px;
-  margin-top: 2px;
+  margin-top: 1px;
   margin: 15px 20px ;
+  color: white;
+  font-size: 12px;
+  /* color: black; */
+
+ 
 }
-.img{
-  border-radius: 10px;
+.imgs{
+  border-radius: 30px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-  
+
+.places a:hover{
+  background-color: #3d405b;
+  color: #f2cc8f;
+  height: 10px;
+  border-radius: 5px;
+  }
+
