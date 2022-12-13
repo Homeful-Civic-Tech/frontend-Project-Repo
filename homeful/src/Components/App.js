@@ -8,6 +8,8 @@ import VerifyLogin from './VerifyLogin';
 import FeedsPage from './FeedsPage';
 
 import ProfilePage from './Profiles';
+import ProfilePage from './ProfilePage'
+import WholeProfile from './WholeProfile';
 
 import WholeProfile from './WholeProfile';
 
@@ -26,7 +28,6 @@ function App() {
         <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='/feeds/:id' element={<ProfilePage/>}/>
         <Route path='*' element={<Navigate to='/'/>}/>
-
         <Route path = '/Profile' element={<WholeProfile/>}/>
 
      </Routes> 
