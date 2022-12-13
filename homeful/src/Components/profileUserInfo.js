@@ -1,7 +1,7 @@
 import React from "react"
 
 
-let Users = [{"username": localStorage.getItem("username")}]
+let Users = [{"username": localStorage.getItem("username"), "userid": localStorage.getItem("userId")}]
 
 function Profiles(prop){
     return(
@@ -14,7 +14,7 @@ function Profiles(prop){
 function PostProfile() {
     return (
         <div className=''>
-            {Users.map(post => <Profiles obj={post} key={post.id}/>)}
+            {Users.map(post => <Profiles obj={post} key={post.userid}/>)}
         </div>
     )
 }

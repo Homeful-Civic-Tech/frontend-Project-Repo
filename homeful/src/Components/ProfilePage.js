@@ -6,14 +6,12 @@ function ProfilePageSaves(props) {
     console.log(props.obj.shelter_name)
         return (
             <div className="cards">
-                {props.obj.shelter_name (
                     <>
                         <div className="names"><h1>{props.obj.shelter_name}</h1></div>
                         <img className = "img" src={props.obj.url} width="320x" height="260px"></img>
                         <p className="location">{props.obj.location}</p>
-                        <p className = "available">Available for:{props.obj.hours}</p>
+                        {/* <p className = "available">Available for:{props.obj.hours}</p> */}
                     </>
-                )}
             </div>
         )
     }
@@ -47,7 +45,7 @@ function PostFeed() {
     }else{
     return(
         <div className='EachSave'>
-            {shelters.map(post => <ProfilePageSaves obj={post} key={post.shelter_name}/>)}
+            {shelters.map((post, i) => <ProfilePageSaves obj={post} key={i}/>)}
         </div>
     )
     }
