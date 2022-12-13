@@ -10,27 +10,23 @@ import "../CSS/Post.css"
 
 
 
-function Post(props) {
+function RoomsPost(props) {
  
  
 
   return (
 
-
    <Link to={`/feeds/${props.obj.id}`}>
       <div className='cards'>
-         <div  className='names'><h1  >{props.obj.shelter_name}</h1></div>
+         <div  className='names'><h1  >{props.obj.name}</h1></div>
          <img  className="img" src={props.obj.url} alt="" width="320x" height="260px"/>
-
          <p className='location'> {props.obj.location}</p>
-         <div className='line'></div>
          <Button variant='contained' style={{
             borderRadius: 35,
-            backgroundColor: "white",
-            color: '#00274E',
+            backgroundColor: "#21b6ae",
             fontSize: "10px",
-            margin: "10px 90px",
-            padding:'7px'
+            margin: "5px 130px",
+            margintop: "2px"
             }} size="small">Book</Button>
       </div>
       </Link>
@@ -40,7 +36,7 @@ function Post(props) {
 } 
 
 
-export default Post
+export default RoomsPost
   
 
 

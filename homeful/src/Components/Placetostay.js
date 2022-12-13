@@ -3,8 +3,6 @@ import Button from '@mui/material/Button'
 import HouseIcon from '@mui/icons-material/House';
 import '../CSS/Post.css'
 
-
-
 function PlacestostayButton(){
   return (
     <Button className="places" startIcon={<HouseIcon/>} variant='contained' style={{
