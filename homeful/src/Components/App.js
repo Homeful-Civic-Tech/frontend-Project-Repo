@@ -22,8 +22,8 @@ function App() {
         <Route path='/verify' element={<VerifyLogin/>}/>
         <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='/feeds/:id' element={<ProfilePage/>}/>
-        <Route path='*' element={<Navigate to='/'/>}/>
         <Route path = '/Profile' element={<WholeProfile/>}/>
+        <Route path='*' element={<Navigate to='/'/>}/>
      </Routes> 
     </div>
   );

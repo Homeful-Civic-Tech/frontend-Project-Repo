@@ -6,7 +6,7 @@ let Users = [{"username": localStorage.getItem("username"), "userid": localStora
 function Profiles(prop){
     return(
     <>
-     <h1>{prop.obj.username}</h1>
+     <h1>{`Hello, ${prop.obj.username}!`}</h1>
     </>
     )
 }
