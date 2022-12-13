@@ -1,0 +1,41 @@
+.rsf-container{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.form, .fn-q{
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form, .ln-q{
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form, .eml-q{
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form, .g-q{
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form, .text-box{
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.submitReservation{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+}

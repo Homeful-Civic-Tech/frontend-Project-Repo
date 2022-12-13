@@ -5,10 +5,6 @@ import '../CSS/Post.css'
 
 
 
-
-
-
-
 function PlacestostayButton(){
   return (
     <Button className="places" startIcon={<HouseIcon/>} variant='contained' style={{
