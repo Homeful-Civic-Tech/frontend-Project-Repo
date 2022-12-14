@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import "../CSS/ReservingShelterForm.css"
 import ReservationConfirmation from './ReservationsConfirmation'
-
+import ConfettiAnim from './Confetti';
 
 export default function ReservingAShelterForm(){
   const [ firstname, updateFNChange ] = useState('')
@@ -32,9 +32,11 @@ function handleSubmit(e){
   } else{
     setReservForm(false)
     setConf(true)
+    
   }
 }
-
+ {/* <div className="button-submit">
+      <button type="submit" className="submitReservation">Book Reservation</button> */}
 return (
   <>
   {showConf && <ReservationConfirmation/>}
@@ -42,7 +44,7 @@ return (
   <div className="rsf-container">
    <div className="form-container">
     <h1 className='header-text'>Enter your details below</h1>
-    <form className='form-reserv' onSubmit={handleSubmit} >
+    <form className='form-reserv' onSubmit={handleSubmit}>
 
         <input type="text" name="firstName" placeholder="First Name"  autoComplete="off" value={firstname} required onChange={(e) => {updateFNChange(e.target.value)}}/>
 
@@ -65,9 +67,7 @@ return (
 
         <input type="text" placeholder="Anything you'd like to let us know?" value={additionalInfoText} onChange={(e) => updateAITChange(e.target.value)}/><br/>
       
-      <div className="button-submit">
-      <button type="submit" className="submitReservation">Book Reservation</button>
-      </div>
+      <ConfettiAnim/>
     </form>
     </div>
     </div>}

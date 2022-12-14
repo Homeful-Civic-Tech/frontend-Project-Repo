@@ -19,10 +19,8 @@ export default function ConfirmedReservationMessage(){
 
     return(
         <>
-        <div className="message-container">
-           <Confetti/>
-            <h2>Congratulations, your booking is confirmed.</h2>
-            </div>
+        <div className="conf-container">
+            <h2 className="message-container">Congratulations, your booking is confirmed.</h2>
 
             <div className='buttons-for-conf-page'>
             <button type="click" className='backtoFeeds' onClick={navigateToFeeds}>Go back</button>
@@ -30,6 +28,7 @@ export default function ConfirmedReservationMessage(){
             <button type="click" className="viewReservations" onClick={navigateToHome}>View my reservation</button>
 
             <button type="click" className="goHome"onClick={navigateToHome}>Go home</button>
+            </div>
             </div>
         </>
     )

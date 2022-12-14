@@ -1,19 +1,20 @@
 import React from 'react'
 import '../CSS/Body.css'
-import Mission from './Mission'
 
 function Body(){
   return (
-    <body className='body'>  
-    <Mission/>
-    {/* <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="holding hands" width="300px" height="300px"/> */}
-    {/* style={{ backgroundImage: `url(./landingpage_handshome.png)`}} */}
-        {/* <section className='mission'>
-            <h1 className='discription'> Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-            </h1>
-            <button className = 'button' type="button">Sign Up</button>
-         </section> */}
-    </body>
+    <div className='container'>
+    <div className='cardContainer'>
+        <h1 style={{fontFamily: 'lato', color: '#00274E'}}>Housing people in Brooklyn one person at a time</h1>
+        <p style={{fontFamily: 'lato', color: '#00274E'}}>Homeful combats the homelessness crisis in New York City by providing access to shelters and rooms to houseless people through a shelter find-and-reserve application to improve their quality of life.</p>
+      <button>Get started</button>
+    </div>
+      <div className='IMGContainer'>
+        <div className='imgBox'>  
+          <img src={require('../IMGs/bkyln-bridge.jpg')} height='80%' width='70%' sizes='20vw' alt='' className='shelterImg'/>
+        </div>
+      </div>
+      </div>
     )
 }
 

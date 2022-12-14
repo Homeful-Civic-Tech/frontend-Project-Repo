@@ -11,6 +11,7 @@ import WholeProfile from './WholeProfile';
 import ReservationsContainer from './ReservationsContainer'
 import ReservationConfirmation from './ReservationsConfirmation'
 
+
 function App() {
   
   return (
