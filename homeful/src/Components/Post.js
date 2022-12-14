@@ -3,6 +3,7 @@ import Button from '@mui/material/Button'
 import { useNavigate, Link } from "react-router-dom";
 //  import React from "react"
 import "../CSS/Post.css"
+import React from 'react';
 
 
 

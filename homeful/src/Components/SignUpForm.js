@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import "../CSS/Sign.css"
 import LogIn from './Login';
+import React from 'react';
 
 
 

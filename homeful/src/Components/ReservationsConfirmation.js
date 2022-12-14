@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import "../CSS/ConfirmationReservation.css"
 import Confetti from './Confetti'
+import React from 'react';
 
 export default function ConfirmedReservationMessage(){
     return(

@@ -2,6 +2,7 @@ import ProfilePageSaves from './ProfilePage';
 import FeedsNavbar from './Feedsnav';
 import img_avatar from '../IMGs/img_avatar.png';
 import '../CSS/WholeProfile.css';
+import React from 'react';
 
 {/* <WholeProfile name="Kayne West" /> */}
 
