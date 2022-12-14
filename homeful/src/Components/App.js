@@ -7,8 +7,8 @@ import RoomAppConfirm from './RoomAppConfirm';
 import VerifyLogin from './VerifyLogin';
 import FeedsPage from './FeedsPage';
 import ProfilePage from './Profiles';
+// import ProfilePage from './ProfilePage'
 import WholeProfile from './WholeProfile';
-
 
 
 
