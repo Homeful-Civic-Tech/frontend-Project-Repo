@@ -17,11 +17,12 @@ function WholeProfile() {
             <FeedsNavbar />
             <div className='userBio'>
             <div className="YourSaves">
-                <img className = "profileAvatar" src={img_avatar1} alt="Avatar" style={{ width: "100px" }} />
+
+                {/* <img className = "profileAvatar" src={img_avatar1} alt="Avatar" style={{ width: "100px" }} /> */}
             <Profiles />
             </div>
             </div>
-            <h2 style={{...style1, ...style2}} className='placesYouBook'> Here are the Places You've Book:</h2>
+            <h2  className='placesYouBook'> Here are the Places You've Book:</h2>
             <div className='post'>
             <ProfilePageSaves />
             </div>
