@@ -1,0 +1,65 @@
+
+.container{
+    width: 600px;
+  
+    background-color: #00274E;
+    margin: 0 0 0 10px;
+    
+    /* position: absolute;  */
+    /* top: 400px; added
+    /* left: 10%;  */
+}
+.inner{
+    background-color:#00274E ;
+    width: 630px;
+    border: 0.1px solid #00274E ;
+    margin-left: 35px;
+    /* top: 400px; /* added */
+    /* left: 10%; */ 
+  
+
+}
+
+.date{
+    font-family: 'lato';
+    font-size: 10px;
+    color: grey;
+}
+
+
+.review{
+    width: 600px;
+    border: 0.2px solid black; 
+   margin-top: 20px;
+   margin-left: 15px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 5px 0 5px -5px rgba(255,255,255, 0.3),
+    -5px 0 5px -5px rgba(255,255,255, 0.3); 
+}
+
+.comment{
+    font-family: 'lato';
+    font-size: 15px ;
+    padding: 10px;
+}
+
+.profile_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.stars{
+    width: 100px;
+}
+
+.flex{
+    display:flex;
+}
+
+.flex div{
+  margin: 15px  25px;
+}

@@ -110,7 +110,7 @@ function FeedsPage(){
   <div>
   <FeedsNavbar/>
   <div className='feedspg'>
-  <div className="container">
+  <div className="container1">
       <form className="nosubmit">
       <input className="nosubmit" value={searchInfo} onChange={handleSearchChange} type="search" placeholder="Search..."/>
       </form>

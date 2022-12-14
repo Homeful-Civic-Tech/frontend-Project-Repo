@@ -8,6 +8,7 @@
     margin: 15px;
     display: flex;
     justify-content: space-evenly;
+ ;
 }
 
 .form, .ln-q{
@@ -38,4 +39,5 @@
     width: fit-content;
     display: flex;
     justify-content: center;
+   
 }
