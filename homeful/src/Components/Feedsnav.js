@@ -13,7 +13,7 @@ function Navbar(){
     <ul className="nav_list">
       <Link to="/">Home</Link>
       <Link to="/">About us</Link>
-      <Link to="/sign-up">Sign-in/Sign-up</Link>
+      <Link to="/Profile">Sign-in/Sign-up</Link>
     </ul>
   </nav>
     )

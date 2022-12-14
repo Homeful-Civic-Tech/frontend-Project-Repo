@@ -6,8 +6,6 @@ import GoogleMaps from './googlemap';
 import Testimonials from './Testimonials'
 import React from 'react';
 
-
-
 function ProfileInfo(props) {
 
     
@@ -18,7 +16,7 @@ function ProfileInfo(props) {
 
                 <img className='img' src={props.myData.url} alt=""  />
                 <div className='data'>
-                    <h1>{props.myData.shelter_name}</h1>
+                    <h1>{props.myData.name}</h1>
                     <p>{props.myData.location}</p>
                     <p>{props.myData.phone_num}</p>
                     <p>Category: {props.myData.category}</p>
@@ -42,11 +40,10 @@ function ProfileInfo(props) {
             </div>
                <div className='outterBox'>
                 <div>
-                 <p className="desc"> <b>Information About {props.myData.shelter_name} </b>
+                 <p className="desc"> <b>Information About {props.myData.name} </b>
                 <br />
                 <br />
-                The New York City  {props.myData.shelter_name} is the oldest shelter in the United States, providing spiritual hope, education, food, clothing, and shelter to New Yorkers in crisis.  <br/><br/>The {props.myData.shelter_name}  provides emergency and preventative services through the THRIVE Program, an innovative approach to combating episodic and chronic homelessness.  <br/><br/>{props.myData.shelter_name}  embodies three pathways: Emergency Food & Shelter, Workforce Readiness, and Workforce Development. All pathways offer support to hurting New Yorkers and opportunities for our gracious volunteers to engage directly in making social impact.
-          
+                {props.myData.bio}
                </p>
                 </div> 
                 </div>

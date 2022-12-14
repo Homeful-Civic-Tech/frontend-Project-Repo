@@ -1,5 +1,5 @@
 import SignUp from './SignUpForm';
-import LogIn from './LogInForm';
+import LogIn from './Login';
 import { Routes, Route, Navigate} from "react-router-dom";
 import LandingPage from './LandingPage'
 import AccamodForm from './AccomodForm';
@@ -7,8 +7,8 @@ import RoomAppConfirm from './RoomAppConfirm';
 import VerifyLogin from './VerifyLogin';
 import FeedsPage from './FeedsPage';
 import React from 'react';
-import ProfilePages from './Profiles';
-import ProfilePage from './ProfilePage'
+import RoomsProfilePage from './RoomsProfiles'
+import ProfilePage from './Profiles';
 import WholeProfile from './WholeProfile';
 
 
@@ -27,6 +27,7 @@ function App() {
         <Route path='/verify' element={<VerifyLogin/>}/>
         <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='/feeds/:id' element={<ProfilePage/>}/>
+        <Route path='/rooms/:id' element={<RoomsProfilePage/>}/>
         <Route path='*' element={<Navigate to='/'/>}/>
         <Route path = '/Profile' element={<WholeProfile/>}/>
      </Routes> 

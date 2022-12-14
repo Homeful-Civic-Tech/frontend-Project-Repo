@@ -19,9 +19,14 @@
   margin: 10px 15px;
   background-color: #00274E;
   border-radius: 30px;
-  
+  box-shadow: 0px 4px 18px -9px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
 }
-.shelter_name{
+.cardss:hover{
+ transform: scale(1.07) ;
+}
+
+.name{
   font-size: 10px;
   font-family: 'Poppins';
   height:30px;
@@ -36,7 +41,7 @@
   background-color: white;
  
 }
-.shelter_name h1{
+.name h1{
   position: relative;
   top: 5pxx;
   text-align: center; 
