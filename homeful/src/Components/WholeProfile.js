@@ -22,7 +22,7 @@ function WholeProfile() {
             <Profiles />
             </div>
             </div>
-            <h2  className='placesYouBook'> Here are the Places You've Book:</h2>
+            <h2  className='placesYouBook'> Here are the Places You've Booked:</h2>
             <div className='post'>
             <ProfilePageSaves />
             </div>
