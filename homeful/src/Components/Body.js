@@ -11,7 +11,7 @@ function Body(){
     </div>
       <div className='IMGContainer'>
         <div className='imgBox'>  
-          <img src={require('../IMGs/bkyln-bridge.jpg')} height='80%' width='70%' sizes='20vw' alt='' className='shelterImg'/>
+          <img src={require('../IMGs/bkyln-bridge.jpg')} height='80%' width='70%' sizes='20vw' alt='' className='shelterImg' fetchpriority='high'/>
         </div>
       </div>
       </div>
