@@ -1,20 +1,23 @@
 import React from "react";
 import {useState, useEffect} from 'react'
+import Button from '@mui/material/Button'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faStar } from '@fortawesome/free-solid-svg-icons'
  
 
 function ProfilePageSaves(props) {
-    console.log(props.obj.shelter_name)
+   
         return (
-            <div className="cards">
-                    <>
-                        <div className="names"><h1>{props.obj.shelter_name}</h1></div>
-                        <img className = "img" src={props.obj.url} width="320x" height="260px"></img>
-                        <p className="location">{props.obj.location}</p>
-                        {/* <p className = "available">Available for:{props.obj.hours}</p> */}
-                    </>
-            </div>
+      
+   <div className='cardss'>
+
+      <img  className='imgs'src={props.obj.url} alt="" width="250x" height="240px"/>
+
+      <div  className='shelter_name'><h1  >{props.obj.shelter_name}</h1></div>
+      <p className='location'> {props.obj.location}</p>
+      
+   </div>
+
         )
     }
 
