@@ -2,8 +2,10 @@ import ProfilePageSaves from './ProfilePage';
 import FeedsNavbar from './Feedsnav';
 import img_avatar1 from '../IMGs/img_avatar1.png';
 import '../CSS/WholeProfile.css';
+import React from 'react';
 import { modalUnstyledClasses } from '@mui/material';
 import Profiles from './profileUserInfo'
+
 
 {/* <WholeProfile name="Kayne West" /> */}
 

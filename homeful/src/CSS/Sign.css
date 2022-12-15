@@ -9,7 +9,7 @@
  
  .containers {
 	 width: 700px;
-	 height: 400px;
+	 height: 500px;
 	 background: white;
 	 position: relative;
 	 display: grid;
@@ -65,7 +65,7 @@
 	 border-right: 1px solid #999;
 }
  .sign {
-	 width: 70%;
+	 width: 100%;
 }
  .sign > * {
 	 margin: 10px;

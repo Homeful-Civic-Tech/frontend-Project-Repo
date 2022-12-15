@@ -4,12 +4,17 @@ import Button from '@mui/material/Button'
 import { GoogleMap } from '@react-google-maps/api';
 import GoogleMaps from './googlemap';
 import Testimonials from './Testimonials'
+
+import React from 'react';
+
 import ShelterReviews from './Reviews';
 import { useNavigate } from 'react-router-dom'; 
 
 
 
+
 function ProfileInfo(props) {
+
 
     const navigate = useNavigate();
     const review = [
@@ -22,6 +27,7 @@ function ProfileInfo(props) {
 
 
     console.log(props.myData.num_phone)
+
     return (
 
         <div >

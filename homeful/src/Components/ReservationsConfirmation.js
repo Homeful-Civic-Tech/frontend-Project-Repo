@@ -1,6 +1,7 @@
 import {Routes, Route, useNavigate } from 'react-router-dom';
 import "../CSS/ConfirmationReservation.css"
 import Confetti from './Confetti'
+import React from 'react';
 import FeedsPage from './FeedsPage';
 import LandingPage from './LandingPage'
 

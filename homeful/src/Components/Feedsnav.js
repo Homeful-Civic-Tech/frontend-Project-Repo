@@ -5,6 +5,7 @@ import '../CSS/Navbar.css'
 
 
 function Navbar(){
+  let username = localStorage.getItem("username")
   return (
   <nav className="navbar_nav">
      <h1 className='logo'>HomeFul</h1>
@@ -12,8 +13,12 @@ function Navbar(){
     {/* <Link to="/">{Logo}</Link> */}
     <ul className="nav_list">
       <Link to="/">Home</Link>
-      <Link to="/">About us</Link>
-      <Link to="/sign-up">Sign-in/Sign-up</Link>
+      <Link to="/room-form/">Add Accommodations</Link>
+      <Link to="/feeds/">Feeds</Link>
+      <Link to="/Profile">{username}</Link>
+      <Link onClick={()=>{
+        localStorage.clear();
+      }}to='/'>Log-out</Link>
     </ul>
   </nav>
     )

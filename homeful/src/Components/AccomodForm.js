@@ -1,14 +1,10 @@
 import { useState } from "react"
-// import SubmitAcomForm from "./SubmitAcomForm"
 import * as React from 'react';
-// import Box from '@mui/material/Box';
-// import TextField from '@mui/material/TextField';
-// import { Typography } from "@mui/material";
-import Navbar from './Navbar'
-// import BackToFeeds from "./BackToFeeds";
-// import { styled } from '@mui/system';
+import Navbar from './Feedsnav'
 import { useNavigate } from 'react-router-dom'; 
 import ShelterAdd from './ShelterButtonForm';
+
+
 export default function AccamodForm(){
 
   const navigate = useNavigate();
@@ -107,6 +103,7 @@ export default function AccamodForm(){
  
   return(
       <>
+      <Navbar/>
           <div className="containers">
               <div className="message signup">
               <div className="btn-wrapper">
@@ -134,11 +131,9 @@ export default function AccamodForm(){
                       <label>Who are you looking to share a room with...</label>
                       <select  onChange ={handleCChange} value ={category}>
                           <option value ="Must Select option">Must Select option</option>
-                          <option value ="Female">Female</option>
-                          <option value ="Male">Male</option>
-                          <option value ="Unisex">Unisex</option>
+                          <option value ="woman">Female</option>
+                          <option value ="man">Male</option>
                           <option value ="Family">Family</option>
-                          <option value ="All">All</option>
                       </select>
                       
                       

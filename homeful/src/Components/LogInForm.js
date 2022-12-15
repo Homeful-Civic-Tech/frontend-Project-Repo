@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Context from '../Contexts/Context'
 import VerifyLogin from './VerifyLogin';
 import {useNavigate} from 'react-router-dom';
-
+import React from 'react';
 
 const LoginGreeting = styled('div')({
     backgroundColor: '#F2CC8F',

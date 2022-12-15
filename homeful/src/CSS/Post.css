@@ -26,7 +26,7 @@
  transform: scale(1.07) ;
 }
 
-.shelter_name{
+.name{
   font-size: 10px;
   font-family: 'Poppins';
   height:30px;
@@ -41,7 +41,7 @@
   background-color: white;
  
 }
-.shelter_name h1{
+.name h1{
   position: relative;
   top: 5px;
   text-align: center; 

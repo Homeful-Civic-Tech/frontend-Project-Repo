@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './Feedsnav'
 import '../CSS/Navbar.css'
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
@@ -14,7 +14,7 @@ function ProfilePage (){
   let [eachShelter, getShelters] = useState([]);
   let {id} = useParams()
 
-  // console.log(id)
+
 
     useEffect(()=>{
      async function allShelters () {
@@ -26,7 +26,7 @@ function ProfilePage (){
         throw response
       })
       getShelters(info[0])
-      // console.log(info[0])
+     
      
     }
       allShelters()

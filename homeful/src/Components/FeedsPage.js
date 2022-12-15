@@ -6,7 +6,7 @@ import Post from './Post.js'
 import RoomsPost from './RoomsPost.js'
 import '../CSS/FeedsPage.css'
 import {useState, useEffect} from 'react'
-import PlacestostayButton from './Placetostay'
+
 import Button from '@mui/material/Button'
 
 function FeedsPage(){
@@ -156,7 +156,7 @@ function FeedsPage(){
         variant='contained' >
         Family
       </Button>
-      <PlacestostayButton/>
+     
   </div>
   </div>
   <div className='post'>

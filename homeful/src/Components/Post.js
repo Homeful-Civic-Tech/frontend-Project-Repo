@@ -3,6 +3,7 @@ import Button from '@mui/material/Button'
 import { useNavigate, Link } from "react-router-dom";
 //  import React from "react"
 import "../CSS/Post.css"
+import React from 'react';
 
 
 
@@ -20,7 +21,7 @@ function Post(props) {
 
       <img  className='imgs'src={props.obj.url} alt="" width="250x" height="240px"/>
 
-      <div  className='shelter_name'><h1  >{props.obj.shelter_name}</h1></div>
+      <div  className='name'><h1  >{props.obj.shelter_name}</h1></div>
       <p className='location'> {props.obj.location}</p>
       <div className='line'></div>
       <Button variant='contained' className='book'style={{

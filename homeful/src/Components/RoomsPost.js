@@ -3,6 +3,7 @@ import Button from '@mui/material/Button'
 import { useNavigate, Link } from "react-router-dom";
 //  import React from "react"
 import "../CSS/Post.css"
+import React from 'react';
 
 
 
@@ -15,21 +16,25 @@ function RoomsPost(props) {
  
 
   return (
+    <Link to={`/rooms/${props.obj.id}`} className="Post">
+    <div className='cardss'>
+ 
+       <img  className='imgs'src={props.obj.url} alt="" width="250x" height="240px"/>
+ 
+       <div  className='name'><h1  >{props.obj.name}</h1></div>
+       <p className='location'> {props.obj.location}</p>
+       <div className='line'></div>
+       <Button variant='contained' className='book'style={{
+          borderRadius: 35,
+          backgroundColor: "white",
+          color: '#00274E',
+          fontSize: "10px",
+          margin: "10px 90px",
+          padding:'7px'
+          }} size="small">Book</Button>
+    </div>
+    </Link>
 
-   <Link to={`/feeds/${props.obj.id}`}>
-      <div className='cards'>
-         <div  className='names'><h1  >{props.obj.name}</h1></div>
-         <img  className="img" src={props.obj.url} alt="" width="320x" height="260px"/>
-         <p className='location'> {props.obj.location}</p>
-         <Button variant='contained' style={{
-            borderRadius: 35,
-            backgroundColor: "#21b6ae",
-            fontSize: "10px",
-            margin: "5px 130px",
-            margintop: "2px"
-            }} size="small">Book</Button>
-      </div>
-      </Link>
     
     
   );

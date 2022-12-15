@@ -2,7 +2,7 @@ import Context from '../Contexts/Context';
 import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LogIn from './LogInForm';
-
+import React from 'react';
 
 
 export default function VerifyLogin(){
