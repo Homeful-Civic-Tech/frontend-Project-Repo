@@ -20,7 +20,17 @@ export default function ReservingAShelterForm(){
 function handleSubmit(e){
   e.preventDefault()
   const emlRegex = /^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,6}$/
-  
+  const userId = localStorage.getItem('userId')
+  const data = {
+    "firstname": firstname, 
+    "lastname": lastname,
+    "gender": gender,
+    "email": email, 
+    "message": additionalInfoText,
+    "user_id": userId
+  }
+
+
   if(firstname.length < 2){
       alert('First name input cannot be less than 2 char')
   } else if(lastname.length < 2 ){
@@ -32,11 +42,19 @@ function handleSubmit(e){
   } else{
     setReservForm(false)
     setConf(true)
-    
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: data
+  };
+
+  fetch('http://localhost:4009/reservations/',requestOptions)
+  .then(response => response.json())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
   }
 }
- {/* <div className="button-submit">
-      <button type="submit" className="submitReservation">Book Reservation</button> */}
+
 return (
   <>
   {showConf && <ReservationConfirmation/>}
