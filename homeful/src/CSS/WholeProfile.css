@@ -5,14 +5,14 @@
 .Post{
     text-decoration: none;
   
-  }
+}
   
-  .post {
+.post {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
-    justify-content: center;
+justify-content: center;
   
   }
 .userBio{
@@ -99,7 +99,16 @@
 	text-align: center;
     border-radius: 50%;
 }
+h1{
+   margin: 15px 10px;
+}
 
+h2{
+    margin:10px 10px ;
+}
+p{
+    margin-bottom: 10px;
+}
 .round-img{
     border-radius: 50%;
 }
@@ -154,12 +163,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 400px;
 }
 .userBio:before {
     content: "";
     position: absolute;
-    bottom: 140.9px;
+    bottom: 230px;
     left: 0;
     width: 100%;
     height: 190px;
