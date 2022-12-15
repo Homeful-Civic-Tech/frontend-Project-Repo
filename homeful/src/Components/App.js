@@ -29,7 +29,6 @@ function App() {
         <Route path='/feeds' element={<FeedsPage/>}/>
         <Route path='/feeds/:id' element={<ProfilePage/>}/>
         <Route path = '/Profile' element={<WholeProfile/>}/>
-
         <Route path='*' element={<Navigate to='/'/>}/>
      </Routes> 
     </div>
