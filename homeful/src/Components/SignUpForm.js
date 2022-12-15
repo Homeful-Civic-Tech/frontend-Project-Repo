@@ -4,6 +4,9 @@ import "../CSS/Sign.css"
 import LogIn from './Login';
 import React from 'react';
 
+import NavbarSignUp from './NavbarSignUp';
+
+
 
 
 
@@ -106,6 +109,7 @@ export default function SignUpLogIn(){
     
     return (
         <>
+           <NavbarSignUp/>
             <div className="containers">
                 <div className="message signup">
                 <div className="btn-wrapper">

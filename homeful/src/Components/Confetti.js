@@ -22,7 +22,7 @@ export default function ConfettiAnim(){
         fontWeight: "400",
         position: "relative",
         zIndex: "3",
-        background: "#8288ff",
+        background: "#00274E",
         fontFamily: "Source Sans Pro, sans-serif",
         cursor: "pointer"
         }}>Book Reservation

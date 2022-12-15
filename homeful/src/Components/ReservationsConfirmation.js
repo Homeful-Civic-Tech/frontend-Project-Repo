@@ -26,7 +26,7 @@ export default function ConfirmedReservationMessage(){
             <div className='buttons-for-conf-page'>
             <button type="click" className='backtoFeeds' onClick={navigateToFeeds}>Go back</button>
             
-            <button type="click" className="viewReservations" onClick={navigateToHome}>View my reservation</button>
+            <button type="click" className="viewReservations" onClick={() => navigate("/Profile")}>View my reservation</button>
 
             <button type="click" className="goHome"onClick={navigateToHome}>Go home</button>
             </div>

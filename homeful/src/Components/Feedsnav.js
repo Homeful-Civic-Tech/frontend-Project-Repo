@@ -13,6 +13,7 @@ function Navbar(){
     {/* <Link to="/">{Logo}</Link> */}
     <ul className="nav_list">
       <Link to="/">Home</Link>
+      <Link to="/room-form/">Add Accommodations</Link>
       <Link to="/feeds/">Feeds</Link>
       <Link to="/Profile">{username}</Link>
       <Link onClick={()=>{

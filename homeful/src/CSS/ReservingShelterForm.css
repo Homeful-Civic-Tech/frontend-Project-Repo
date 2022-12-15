@@ -12,7 +12,7 @@
      font-size: 25px;
 	 height: 50px;
      text-align: center;
-	 color: #8288ff;
+	 color: #00274E;
      padding-top: 15px;
 	 font-family: "Source Sans Pro", sans-serif;
 }
@@ -42,4 +42,6 @@
     padding-top: 10px;
     font-family: "Source Sans Pro", sans-serif;
 }
-
+.rsf-container{
+    padding-top: 70px;
+}

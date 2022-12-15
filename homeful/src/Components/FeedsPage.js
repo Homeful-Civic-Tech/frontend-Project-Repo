@@ -6,7 +6,7 @@ import Post from './Post.js'
 import RoomsPost from './RoomsPost.js'
 import '../CSS/FeedsPage.css'
 import {useState, useEffect} from 'react'
-import PlacestostayButton from './Placetostay'
+
 import Button from '@mui/material/Button'
 
 function FeedsPage(){
@@ -110,7 +110,7 @@ function FeedsPage(){
   <div>
   <FeedsNavbar/>
   <div className='feedspg'>
-  <div className="container">
+  <div className="container1">
       <form className="nosubmit">
       <input className="nosubmit" value={searchInfo} onChange={handleSearchChange} type="search" placeholder="Search..."/>
       </form>
@@ -119,10 +119,10 @@ function FeedsPage(){
    <div className="forms" >
       <Button style={{
       borderRadius: 35,
-      backgroundColor: "#21b6ae",
+      backgroundColor: "#00274E",
       padding: "10px 15px",
       fontSize: "10px",
-       fontfamily: 'Poppins',
+       fontfamily: 'lato',
        }}   onClick = {(e)=>{
         e.preventDefault()
         getcategory('woman')
@@ -132,10 +132,10 @@ function FeedsPage(){
       </Button>
       <Button style={{
       borderRadius: 35,
-      backgroundColor: "#21b6ae",
+      backgroundColor: "#00274E",
       padding: "10px 15px",
       fontSize: "10px",
-       fontfamily: 'Poppins',
+       fontfamily: 'lato',
        }}    onClick = {(e)=>{
         e.preventDefault()
         getcategory('man')
@@ -145,10 +145,10 @@ function FeedsPage(){
       </Button>
       <Button style={{
       borderRadius: 35,
-      backgroundColor: "#21b6ae",
+      backgroundColor: "#00274E",
       padding: "10px 15px",
       fontSize: "10px",
-       fontfamily: 'Poppins',
+       fontfamily: 'lato',
        }}     onClick = {(e)=>{
         e.preventDefault()
         getcategory('family')
@@ -156,7 +156,7 @@ function FeedsPage(){
         variant='contained' >
         Family
       </Button>
-      <PlacestostayButton/>
+     
   </div>
   </div>
   <div className='post'>
