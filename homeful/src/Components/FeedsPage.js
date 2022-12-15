@@ -119,10 +119,10 @@ function FeedsPage(){
    <div className="forms" >
       <Button style={{
       borderRadius: 35,
-      backgroundColor: "#21b6ae",
+      backgroundColor: "#00274E",
       padding: "10px 15px",
       fontSize: "10px",
-       fontfamily: 'Poppins',
+       fontfamily: 'lato',
        }}   onClick = {(e)=>{
         e.preventDefault()
         getcategory('woman')
@@ -132,10 +132,10 @@ function FeedsPage(){
       </Button>
       <Button style={{
       borderRadius: 35,
-      backgroundColor: "#21b6ae",
+      backgroundColor: "#00274E",
       padding: "10px 15px",
       fontSize: "10px",
-       fontfamily: 'Poppins',
+       fontfamily: 'lato',
        }}    onClick = {(e)=>{
         e.preventDefault()
         getcategory('man')
@@ -145,10 +145,10 @@ function FeedsPage(){
       </Button>
       <Button style={{
       borderRadius: 35,
-      backgroundColor: "#21b6ae",
+      backgroundColor: "#00274E",
       padding: "10px 15px",
       fontSize: "10px",
-       fontfamily: 'Poppins',
+       fontfamily: 'lato',
        }}     onClick = {(e)=>{
         e.preventDefault()
         getcategory('family')

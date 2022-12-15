@@ -1,9 +1,9 @@
 import React from 'react'
 import '../CSS/Navbar.css' 
 import { Link } from 'react-router-dom'
-import Logo from "../IMGs/logo.png"
 
-function Navbar(){
+
+function NavBarSignUp(){
   return (
     
   <nav className="navbar_nav">
@@ -12,10 +12,10 @@ function Navbar(){
     {/* <Link to="/">{Logo}</Link> */}
     <ul className="nav_list">
       <Link to="/">Home</Link>
-      <Link to="/sign-up">Sign-in/Sign-up</Link>
+
     </ul>
   </nav>
     )
 }
 
-export default Navbar 
+export default NavBarSignUp 

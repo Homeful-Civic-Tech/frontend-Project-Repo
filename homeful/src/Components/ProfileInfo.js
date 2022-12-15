@@ -41,7 +41,7 @@ function ProfileInfo(props) {
 
                 <ChooseDate />
                 <p>Guest: </p>
-              <Button onClick={() => navigate("/room-form")} style={{
+              <Button onClick={() => navigate("/shelter-form")} style={{
                     borderRadius: 35,
                     backgroundColor: "#00274E",
                     padding: "10px 15px",

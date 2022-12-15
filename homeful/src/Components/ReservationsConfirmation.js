@@ -1,24 +1,35 @@
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import {Routes, Route, useNavigate } from 'react-router-dom';
 import "../CSS/ConfirmationReservation.css"
 import Confetti from './Confetti'
+import FeedsPage from './FeedsPage';
+import LandingPage from './LandingPage'
+
 
 export default function ConfirmedReservationMessage(){
+    const navigate = useNavigate()
+
+    function navigateToFeeds(){
+        navigate('/feeds')
+    }
+    
+    function navigateToHome(){
+        navigate('/')
+    }
+
+
     return(
         <>
-        <div className="message-container">
-           {/* <Confetti/> */}
-            <h2>Congratulations, your booking is confirmed.</h2>
-            </div>
+        <div className="conf-container">
+            <h2 className="message-container">Congratulations, your booking is confirmed.</h2>
 
             <div className='buttons-for-conf-page'>
-            <Button type="submit" className='backtoFeeds' variant="outlined" size="small">Go back</Button><Link to='/feeds' style={{textDecoration: 'none'}}></Link>
+            <button type="click" className='backtoFeeds' onClick={navigateToFeeds}>Go back</button>
             
-            <Link to='/user' style={{textDecoration: 'none'}}><Button type="submit" className="viewReservations" variant="outlined" size="small">View my reservation</Button></Link>
+            <button type="click" className="viewReservations" onClick={() => navigate("/Profile")}>View my reservation</button>
 
-             <Link to='/' style={{textDecoration: 'none'}}><Button type="submit" variant="outlined"
-             className="goHome" size="small">Go home</Button></Link>
-             </div>
-             </>
+            <button type="click" className="goHome"onClick={navigateToHome}>Go home</button>
+            </div>
+            </div>
+        </>
     )
 }
