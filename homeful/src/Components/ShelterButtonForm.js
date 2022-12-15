@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { useState } from "react"
-
+import { useNavigate } from 'react-router-dom';
 
 export default function ShelterBtn() {
 
-
+    const navigate = useNavigate();
     const [shelterName, setShelterName] =  useState('')
     const [shelterAddress, setShelterAddress] = useState('')
     
@@ -42,6 +42,7 @@ export default function ShelterBtn() {
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
+    navigate('/feeds')
    }
    
     return(

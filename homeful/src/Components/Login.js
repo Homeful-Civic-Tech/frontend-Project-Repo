@@ -1,58 +1,78 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
-export default function LogIn (){
+export default function LogIn() {
 
     const [passwords, setPassword] = useState('');
     const [userName, setUserName] = useState('');
-    const [login , setLogin] = useState('')
+    const [login, setLogin] = useState('')
     const navigate = useNavigate();
 
-    function handleUSRNChange(e){
+    function handleUSRNChange(e) {
         setUserName(e.target.value)
     }
-    function handlePSWDChange(e){
+    function handlePSWDChange(e) {
         setPassword(e.target.value)
     }
 
-    function handleLoginChange(info){
+    function handleLoginChange(info) {
         setLogin(info)
     }
-   async function handleSISubmit(e){
-        e.preventDefault();
-            const data ={
-                "username":userName,
-                "password":passwords
-            };
+    async function handleSISubmit(e) {
+        e.preventDefault()
+        const data = {
+            "username": userName,
+            "password": passwords
+        };
 
-         await fetch(`http://localhost:4009/user/login/${data.username}/${data.password}`)
-         .then(result => result.json())
-         .then(datas => handleLoginChange(datas))
-        if(login.alert === 'loged in'){
-            localStorage.setItem("userId",login.data.id);
-            localStorage.setItem("username", login.data.username);
-            localStorage.setItem("password", login.data.password);
-            navigate('/feeds')
+        let logindata = await fetch(`http://localhost:4009/user/login/${data.username}/${data.password}`)
+            .then(result => result.json())
+            .then(datas => {
+                handleLoginChange(datas) 
+                if (datas.alert === 'loged in') {
+                localStorage.setItem("userId", datas.data.id);
+                localStorage.setItem("username", datas.data.username);
+                localStorage.setItem("password", datas.data.password);
+                navigate('/feeds')
+            
+        } else {
+            console.log(logindata)
+            alert("Wrong Password or Username")
         }
+            })
+            .catch(error => console.log('error', error));
+       
 
 
-        }
+    }
 
 
 
 
-    return(
-        <div className="form form--login">
-        <div className="form--heading">Welcome back! </div>
-        <form autoComplete="off" onSubmit= {handleSISubmit}>
-            <div className='sign'>
-            <input value={userName} onChange = {handleUSRNChange}type="text" placeholder="Username" />
-            <input value={passwords} onChange = {handlePSWDChange}type="password" placeholder="Password" />
-            <button  type='submit' className="button">Login</button> 
+    return (
+        <div className="containers">
+            <div className="message signup">
+                <div className="btn-wrapper">
+                    <button className="button" onClick={() => { navigate('/sign-up') }} id="signup">
+                        Sign Up
+                    </button>
+                    <button onClick={() => { navigate('/login') }} className="button" id="login">
+                        Login
+                    </button>
+                </div>
             </div>
-        </form>
+            <div className="form form--login">
+                <div className="form--heading">Welcome back! </div>
+                <form autoComplete="off" >
+                    <div className='sign'>
+                        <input value={userName} onChange={handleUSRNChange} type="text" placeholder="Username" />
+                        <input value={passwords} onChange={handlePSWDChange} type="password" placeholder="Password" />
+                        <button type='submit' onClick={handleSISubmit} className="button">Login</button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
