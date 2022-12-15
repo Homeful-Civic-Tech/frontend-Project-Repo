@@ -1,5 +1,7 @@
 import React from "react";
 import {useState, useEffect} from 'react'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faStar } from '@fortawesome/free-solid-svg-icons'
  
 
 function ProfilePageSaves(props) {
@@ -39,7 +41,9 @@ function PostFeed() {
     if (shelters.length === 0){
     return (
         <div>
-            you dont have reservations saved
+             {/* <FontAwesomeIcon icon={faStar} /> */}
+             <h2>You don't have any shelters or accomadations saved</h2>
+             <p> When you find a place you like, reserve it to save your places and you can find it again here.</p>
         </div>
     )
     }else{
