@@ -35,6 +35,9 @@ export default function LogIn (){
             localStorage.setItem("username", login.data.username);
             localStorage.setItem("password", login.data.password);
             navigate('/feeds')
+            console.log("loged in")
+        }else{
+            alert("Not Right Login")
         }
 
 
@@ -46,11 +49,11 @@ export default function LogIn (){
     return(
         <div className="form form--login">
         <div className="form--heading">Welcome back! </div>
-        <form autoComplete="off" onSubmit= {handleSISubmit}>
+        <form autoComplete="off" >
             <div className='sign'>
             <input value={userName} onChange = {handleUSRNChange}type="text" placeholder="Username" />
             <input value={passwords} onChange = {handlePSWDChange}type="password" placeholder="Password" />
-            <button  type='submit' className="button">Login</button> 
+            <button  type='submit'onClick= {handleSISubmit} className="button">Login</button> 
             </div>
         </form>
         </div>
