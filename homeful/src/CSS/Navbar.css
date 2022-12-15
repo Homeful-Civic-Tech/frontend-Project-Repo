@@ -1,16 +1,30 @@
+body{
+  margin: 0;
+ background-color:white ; 
+ font-family: 'Lato';
+}
+
+.logo{
+  font-family: 'lato';
+  color: white;
+  margin-top: 8px;
+}
+
+
 .navbar_nav{
-	background-color: #21b6ae;
+	background-color: #00274E;
+
+  margin: 0;
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 2rem; 
 	height:40px;
-	-webkit-box-shadow: 0 4px 6px -6px #222;
-	-moz-box-shadow: 0 4px 6px -6px #222;
 	box-shadow: 0 4px 6px -6px #222;
   
-  }
+  
+   } 
   .navbar_nav a{
-  color: #3d405b;
+    color:white;
   padding: 15px;
   text-decoration: none;
   font-family: 'Poppins';
@@ -20,8 +34,11 @@
   background-color: #3d405b;
   color: #f2cc8f;
   height: 10px;
+  border-radius: 5px;
   }
   .navbar_nav ul{
 	padding-top: 2px;
 	margin-top: 6px;
-  }
+
+ color:white;
+

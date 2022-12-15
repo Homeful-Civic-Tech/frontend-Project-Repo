@@ -1,13 +1,14 @@
 import React from 'react'
 import Logo from "../IMGs/logo.png"
 import { Link } from 'react-router-dom'
-import '../CSS/Feedsnav.css'
+import '../CSS/Navbar.css' 
 
 
 function Navbar(){
   return (
   <nav className="navbar_nav">
-    <img src={Logo} alt="" width="100px"/>
+     <h1 className='logo'>HomeFul</h1>
+    {/* <img src={Logo} alt="" width="200px" height="50px"/> */}
     {/* <Link to="/">{Logo}</Link> */}
     <ul className="nav_list">
       <Link to="/">Home</Link>
