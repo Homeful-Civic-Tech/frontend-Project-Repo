@@ -1,12 +1,10 @@
 import React from 'react'
 import Navbar from './Navbar'
-
-// import Post from './Post.js'
-// import Button from '@mui/material/Button'
-// import Paper from '@mui/material/Paper'
+import '../CSS/Navbar.css'
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ProfileInfo from './ProfileInfo';
+import GoogleMaps from './googlemap';
 
 
 
@@ -35,11 +33,19 @@ function ProfilePage (){
   
     },[id])
 
+
+
+
+
+
+
+
     
     return (
         <div>
             <Navbar/>
             <ProfileInfo myData={eachShelter}/>
+            {/* <GoogleMaps/> */}
 
            
         </div>
