@@ -1,6 +1,6 @@
 import { useState } from "react"
 import * as React from 'react';
-import Navbar from './Navbar'
+import Navbar from './Feedsnav'
 import { useNavigate } from 'react-router-dom'; 
 import ShelterAdd from './ShelterButtonForm';
 

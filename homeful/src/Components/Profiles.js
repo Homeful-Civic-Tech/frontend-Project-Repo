@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './Feedsnav'
 import '../CSS/Navbar.css'
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
