@@ -40,7 +40,7 @@ function FeedsPage(){
     
     
   async function searchShelterAndRooms (){
-    if(searchInfo<=0){
+    if(searchInfo<=0 && searchInfo != 'search'){
     allRooms()
     allShelters()
 
@@ -125,7 +125,7 @@ function FeedsPage(){
        fontfamily: 'lato',
        }}   onClick = {(e)=>{
         e.preventDefault()
-        getcategory('woman')
+        getcategory('Woman')
        }}
         variant='contained' >
         Woman
@@ -138,7 +138,7 @@ function FeedsPage(){
        fontfamily: 'lato',
        }}    onClick = {(e)=>{
         e.preventDefault()
-        getcategory('man')
+        getcategory('Man')
        }}
         variant='contained' >
         Men
@@ -151,7 +151,7 @@ function FeedsPage(){
        fontfamily: 'lato',
        }}     onClick = {(e)=>{
         e.preventDefault()
-        getcategory('family')
+        getcategory('Family')
        }}
         variant='contained' >
         Family

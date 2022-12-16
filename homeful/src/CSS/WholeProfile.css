@@ -1,174 +1,183 @@
 *{
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .Post{
-    text-decoration: none;
-  
-  }
-  
-  .post {
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: center;
-  
-  }
+  text-decoration: none;
+
+}
+
+.post {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+justify-content: center;
+
+}
 .userBio{
-    text-align: center;
-    margin-bottom: 1px;
+  text-align: center;
+  margin-bottom: 1px;
 }
 .EachSave{
-    display: flex;
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: center;
-  }
-  
+  display: flex;
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+}
+
 .cardss{
 
-    width: 250px;
-    margin: 10px 15px;
-    background-color: #00274E;
-    border-radius: 30px;
-    box-shadow: 0px 4px 18px -9px rgba(0, 0, 0, 0.75);
-    cursor: pointer;
-  }
-  .cardss:hover{
-   transform: scale(1.07) ;
-  }
-  
-  .shelter_name{
-    font-size: 10px;
-    font-family: 'Poppins';
-    height:30px;
-    margin: 0 0 ;
-  }
-  .line{
-    height: 0.1px;
-    box-shadow: white 0px 0px 1px;
-    width: 50%;
-    margin-left: 60px;;
-    margin-top: 20px;
-    background-color: white;
-   
-  }
-  .shelter_name h1{
-    position: relative;
-    top: 5px;
-    text-align: center; 
-    color: white;
-    font-size: 15px;
-    /* color: black; */
-  }
-  .location{
-    height:20px;
-    margin-top: 1px;
-    margin: 15px 20px ;
-    color: white;
-    font-size: 12px;
-    /* color: black; */
-  
-   
-  }
-  .imgs{
-    border-radius: 30px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  
-  .places a:hover{
-    background-color: #3d405b;
-    color: #f2cc8f;
-    height: 10px;
-    border-radius: 5px;
-    }
-  
-.card-container {
-	background-color: #f5d8aa;
-    /* #f2cc8f; */
-	border-radius: 5px;
-	color: #3d405b;
-	padding-top: 30px;
-	position: relative;
-	width: 350px;
-	max-width: 100%;
-	text-align: center;
-    border-radius: 50%;
+  width: 250px;
+  margin: 10px 15px;
+  background-color: #00274E;
+  border-radius: 30px;
+  box-shadow: 0px 4px 18px -9px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.cardss:hover{
+ transform: scale(1.07) ;
 }
 
+.shelter_name{
+  font-size: 10px;
+  font-family: 'Poppins';
+  height:30px;
+  margin: 0 0 ;
+}
+.line{
+  height: 0.1px;
+  box-shadow: white 0px 0px 1px;
+  width: 50%;
+  margin-left: 60px;;
+  margin-top: 20px;
+  background-color: white;
+ 
+}
+.shelter_name h1{
+  position: relative;
+  top: 5px;
+  text-align: center; 
+  color: white;
+  font-size: 15px;
+  /* color: black; */
+}
+.location{
+  height:20px;
+  margin-top: 1px;
+  margin: 15px 20px ;
+  color: white;
+  font-size: 12px;
+  /* color: black; */
+
+ 
+}
+.imgs{
+  border-radius: 30px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.places a:hover{
+  background-color: #3d405b;
+  color: #f2cc8f;
+  height: 10px;
+  border-radius: 5px;
+  }
+
+.card-container {
+/* background-color: #f5d8aa; */
+  /* #f2cc8f; */
+border-radius: 5px;
+color: #3d405b;
+padding-top: 30px;
+position: relative;
+width: 350px;
+max-width: 100%;
+text-align: center;
+  border-radius: 50%;
+}
+h1{
+ margin: 15px 10px;
+}
+
+h2{
+  margin:10px 10px ;
+}
+p{
+  margin-bottom: 10px;
+}
 .round-img{
-    border-radius: 50%;
+  border-radius: 50%;
 }
 .card-container .round {
-	border-radius: 50%;
-	padding: 7px;
-    content: "";
+border-radius: 50%;
+padding: 7px;
+  content: "";
 }
 .round {
-    width: 125px;
-    height: 125px;
-    border: 2px solid #3d405b;
-    border-radius: 25%;
-    position: absolute;
-    left: calc( 50% - 69.2px);
-    top: 18.5px;
-    animation: rotate 2s linear infinite;
-    border-left: 0px;
+  width: 125px;
+  height: 125px;
+  border: 2px solid #3d405b;
+  border-radius: 25%;
+  position: absolute;
+  left: calc( 50% - 69.2px);
+  top: 18.5px;
+  animation: rotate 2s linear infinite;
+  border-left: 0px;
 }
 .card-container .round ::before {
-	border: 2px solid #3d405b;
-	border-radius: 50%;
-	padding: 7px;
-    content: "";
-    animation: rotate 2s linear infinite;
+border: 2px solid #3d405b;
+border-radius: 50%;
+padding: 7px;
+  content: "";
+  animation: rotate 2s linear infinite;
 }
 .card-container .round::after{
-    width: 190px;
-    height: 190px;
-    position: absolute;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 190px;
+  height: 190px;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-size: larger;
-    letter-spacing: 5px;
-    box-shadow: inset 20px 20px 20px #0000008c;
+  font-size: larger;
+  letter-spacing: 5px;
+  box-shadow: inset 20px 20px 20px #0000008c;
 }
 @keyframes rotate {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(-360deg);
-    }
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(-360deg);
+  }
 }
 
 
 .userBio{
-    background-color: #f5d8aa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
+  background: linear-gradient(to top left, #dbe7fc 0%, #00274e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
 }
 .userBio:before {
-    content: "";
-    position: absolute;
-    bottom: 140.9px;
-    left: 0;
-    width: 100%;
-    height: 190px;
-    background: url(
+  content: "";
+  position: absolute;
+  bottom: 230px;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  background: url(
 https://media.geeksforgeeks.org/wp-content/uploads/20200326181026/wave3.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .profileContainer{
-    display: flex;
-	align-items: center;
+  display: flex;
+align-items: center;
 }

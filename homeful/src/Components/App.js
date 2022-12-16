@@ -25,7 +25,7 @@ function App() {
         <Route path='/login' element={<LogIn/>}/>
         <Route path='/room-form' element={<AccamodForm/>}/>
         <Route path='/room-form/confirmation' element={<RoomAppConfirm/>}/>
-        <Route path='/shelter-form' element={<ReservationsContainer/>}/>
+        <Route path='/shelter-form/:id' element={<ReservationsContainer/>}/>
         <Route path='/shelter-form/confirmation' element={<ReservationConfirmation/>}/>
         <Route path='/verify' element={<VerifyLogin/>}/>
         <Route path='/feeds' element={<FeedsPage/>}/>

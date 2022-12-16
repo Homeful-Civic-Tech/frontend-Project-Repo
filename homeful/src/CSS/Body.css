@@ -1,51 +1,47 @@
-.container{
+.all-lading{
    display: flex;
    justify-content: center;
    align-items: center;
+   height: 100vh;
+   background-color: #00274E;
+   
 }
 
-.IMGContainer{
-    object-fit: cover;
-    height: 100%;
-    position: relative;
+.IMGContainers{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 100% !important;
+    background-color: #00274E;
     padding: 25px 0px;
+    margin-bottom: 100px;
+    
 }
 
-.shelterImg{
-    margin-left: 30rem;
-    border-radius: 8px;
-    position: absolute;
-    z-index: -1;
-    width: 60vw;
-    height: 40vw;
+.imgBox{
+    border-radius: 12px;
 }
 
-.cardContainer{
-    position: absolute;
+.cardContainers{
+    height: 65%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
     padding: 30px;
-    margin-top: 40rem;
     background: white;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
-    margin-right: 43%;
-    width: 300px;
-    height: 480px;
 }
 
-.cardContainer > h1 {
+.cardContainers > h1 {
     padding-bottom: 30px;
     text-align: start;
 }
 
-.cardContainer > p {
+.cardContainers > p {
     padding-bottom: 60px;
 }
 
-.cardContainer > button{
+.cardContainers > button{
     color: white;
     background-color: #00274E;
     /* border-width: 1px; */

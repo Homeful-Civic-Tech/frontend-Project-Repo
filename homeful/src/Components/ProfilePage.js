@@ -23,10 +23,11 @@ function ProfilePageSaves(props) {
 
 
 function PostFeed() {
+  let usersId = localStorage.getItem("userId");
     let [shelters, getShelters] = useState([]);
     useEffect(()=>{
      async function UserShelters () {
-     let info = await fetch(`http://localhost:4009/shelters/user/${localStorage.getItem("userId")}`)
+     let info = await fetch(`http://localhost:4009/reservations/${usersId}`)
       .then(response => {
         if (response.ok){
           return response.json()

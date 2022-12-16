@@ -9,7 +9,7 @@ function Profiles(prop){
     <div className="card-container">
 	    <img class="round-img"src={char} alt="user" height={120} />
 	    <div class="round" ></div>
-        <h2>{`Hello, ${prop.obj.username}!`}</h2>
+        <h2>{`Hello, ${Users[0].username}!`}</h2>
 	    <h6>New York</h6>
             </div>
      {/* <h1>{`Hello, ${prop.obj.username}!`}</h1> */}
