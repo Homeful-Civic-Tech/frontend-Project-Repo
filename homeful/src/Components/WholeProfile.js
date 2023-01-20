@@ -2,8 +2,10 @@ import ProfilePageSaves from './ProfilePage';
 import FeedsNavbar from './Feedsnav';
 import img_avatar1 from '../IMGs/img_avatar1.png';
 import '../CSS/WholeProfile.css';
+import React from 'react';
 import { modalUnstyledClasses } from '@mui/material';
 import Profiles from './profileUserInfo'
+
 
 {/* <WholeProfile name="Kayne West" /> */}
 
@@ -22,7 +24,7 @@ function WholeProfile() {
             <Profiles />
             </div>
             </div>
-            <h2  className='placesYouBook' style={{marginTop: '20px'}}> Here are the Places You've Booked:</h2>
+            <h2  className='placesYouBook'> Here are the Places You've Booked:</h2>
             <div className='post'>
             <ProfilePageSaves />
             </div>

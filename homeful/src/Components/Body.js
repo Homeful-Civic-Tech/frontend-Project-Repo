@@ -10,7 +10,7 @@ function Body(){
     </div>
       <div className='IMGContainers'>
         <div >
-          <img className='imgBox' src={require('../IMGs/bkyln-bridge.jpg')} height='80%' width='80%' sizes='20vw' alt='' fetchpriority='high'/>
+          <img className='imgBox' src={require('../IMGs/bkyln-bridge.jpg')} height='80%' width='80%' sizes='20vw' alt='' className='shelterImg' fetchpriority='high'/>
         </div>
       </div>
       </div>
