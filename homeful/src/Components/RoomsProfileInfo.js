@@ -24,7 +24,7 @@ function ProfileInfo(props) {
 
 
     const navigate = useNavigate();
-    
+    console.log(props.myData)
     return (
         <div >
         <div className='all'>
@@ -43,7 +43,7 @@ function ProfileInfo(props) {
 
             <ChooseDate />
             <p>Guest: </p>
-          <Button onClick={() => navigate("/shelter-form")} style={{
+          <Button onClick={() => navigate(`/rooms-form/${props.myData.id}`)} style={{
                 borderRadius: 35,
                 backgroundColor: "#00274E",
                 padding: "10px 15px",

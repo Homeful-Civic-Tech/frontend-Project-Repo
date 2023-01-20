@@ -4,7 +4,7 @@ import img_avatar1 from '../IMGs/img_avatar1.png';
 import '../CSS/WholeProfile.css';
 import { modalUnstyledClasses } from '@mui/material';
 import Profiles from './profileUserInfo'
-
+import React from 'react';
 {/* <WholeProfile name="Kayne West" /> */}
 
 

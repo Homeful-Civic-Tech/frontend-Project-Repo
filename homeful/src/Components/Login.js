@@ -34,7 +34,7 @@ export default function LogIn() {
                 if (datas.alert === 'loged in') {
                 localStorage.setItem("userId", datas.data.id);
                 localStorage.setItem("username", datas.data.username);
-                localStorage.setItem("password", datas.data.password);
+                localStorage.setItem("firstname", datas.data.firstname);
                 navigate('/feeds')
             
         } else {

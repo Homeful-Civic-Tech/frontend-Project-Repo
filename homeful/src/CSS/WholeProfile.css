@@ -88,10 +88,10 @@
   }
 
 .card-container {
-	background-color: #f5d8aa;
+	background-color: #00274E;
     /* #f2cc8f; */
 	border-radius: 5px;
-	color: #3d405b;
+	color: #e5e6ed;
 	padding-top: 30px;
 	position: relative;
 	width: 350px;
@@ -150,7 +150,7 @@ padding: 7px;
 
 
 .userBio{
-    background-color: #f5d8aa;
+    background-color: #00274E;
     display: flex;
     justify-content: center;
     align-items: center;

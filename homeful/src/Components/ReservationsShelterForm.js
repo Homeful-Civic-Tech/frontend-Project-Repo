@@ -13,38 +13,16 @@ export default function ReservingAShelterForm(props) {
   const [sex, updateGenderChange] = useState('')
   const [email, updateEMLChange] = useState('')
   const [additionalInfoText, updateAITChange] = useState('')
-  // const [showReservForm, setReservForm] = useState(true)
-  // const [showConf, setConf] = useState(false)
-  const [userid, setId] = useState([]);
+
   const navigate = useNavigate()
-useEffect(() => {
-  const id = JSON.parse(localStorage.getItem('userId'));
-  if (id) {
-   setId(id);
-  }
-}, []);
-console.log(userid)
+
   function handleSEXChange(e) {
     updateGenderChange(e.target.value)
   }
   const userId = localStorage.getItem('userId')
   function handleSubmit(e) {
     e.preventDefault()
-    //const emlRegex = /^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,6}$/
-  
-    // if (firstname.length < 2) {
-    //   alert('First name input cannot be less than 2 char')
-    // } else if (lastname.length < 2) {
-    //   alert('Last name input cannot be less than 2 char')
-    // } else if (!emlRegex.test(email)) {
-    //   alert('Email input is invalid.')
-    // } else {
-
-
-
-
-
-    
+   
       const data = JSON.stringify({
         "firstname": firstname,
         "lastname": lastname,

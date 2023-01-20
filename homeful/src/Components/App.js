@@ -33,7 +33,7 @@ function App() {
         <Route path='/rooms/:id' element={<RoomsProfilePage/>}/>
         <Route path = '/Profile' element={<WholeProfile/>}/>
         <Route path='*' element={<Navigate to='/'/>}/>
-        
+        <Route path='/rooms-form/:id' element={<ReservationsContainer/>}/>
         
      </Routes> 
     </div>
