@@ -27,7 +27,7 @@ export default function LogIn() {
             "password": passwords
         };
 
-        let logindata = await fetch(`http://localhost:4009/user/login/${data.username}/${data.password}`)
+        let logindata = await fetch(`http://localhost:4000/user/login/${data.username}/${data.password}`)
             .then(result => result.json())
             .then(datas => {
                 handleLoginChange(datas) 

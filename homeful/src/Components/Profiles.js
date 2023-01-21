@@ -18,7 +18,7 @@ function ProfilePage (){
 
     useEffect(()=>{
      async function allShelters () {
-     let info = await fetch(`http://localhost:4009/shelters/${id}`)
+     let info = await fetch(`http://localhost:4000/shelters/${id}`)
       .then(response => {
         if (response.ok){
           return response.json()

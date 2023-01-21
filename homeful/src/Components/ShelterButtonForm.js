@@ -38,7 +38,7 @@ export default function ShelterBtn() {
         headers: { 'Content-Type': 'application/json' },
         body: raw
     };
-    fetch('http://localhost:4009/shelters/add',requestOptions)
+    fetch('http://localhost:4000/shelters/add',requestOptions)
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));

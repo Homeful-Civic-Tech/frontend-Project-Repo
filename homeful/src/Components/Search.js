@@ -14,7 +14,7 @@ export default function Search(){
  }
  useEffect(()=>{
     async function allRooms () {
-      let info = await fetch(`http://localhost:4009/shelters/search/${searchInfo}`)
+      let info = await fetch(`http://localhost:4000/shelters/search/${searchInfo}`)
        .then(response => {
          if (response.ok){
            return response.json()

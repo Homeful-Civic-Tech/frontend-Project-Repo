@@ -94,7 +94,7 @@ export default function AccamodForm(){
       headers: { 'Content-Type': 'application/json' },
       body: raw
   };
-  fetch('http://localhost:4009/rooms/',requestOptions)
+  fetch('http://localhost:4000/rooms/',requestOptions)
   .then(response => response.json())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));

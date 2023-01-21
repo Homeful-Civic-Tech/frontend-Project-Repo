@@ -18,7 +18,7 @@ function ProfilePage() {
 
     useEffect(() => {
         async function allRooms() {
-            let info = await fetch(`http://localhost:4009/rooms/${id}`)
+            let info = await fetch(`http://localhost:4000/rooms/${id}`)
                 .then(response => {
                     if (response.ok) {
                         return response.json();
