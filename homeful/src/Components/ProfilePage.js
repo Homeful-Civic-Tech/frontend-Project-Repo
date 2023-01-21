@@ -27,7 +27,7 @@ function PostFeed() {
     let [shelters, getShelters] = useState([]);
     useEffect(()=>{
      async function UserShelters () {
-     let info = await fetch(`http://localhost:4000/reservations/${usersId}`)
+     let info = await fetch(`http://backend-deployment-production.up.railway.app0/reservations/${usersId}`)
       .then(response => {
         if (response.ok){
           return response.json()

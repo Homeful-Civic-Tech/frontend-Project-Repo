@@ -43,7 +43,7 @@ export default function ReservingAShelterForm(props) {
       };
       // setReservForm(false)
       // setConf(true)
-      fetch("http://localhost:4000/reservations/", requestOptions)
+      fetch("http://backend-deployment-production.up.railway.app0/reservations/", requestOptions)
         .then(response =>response.json())
         .then(result => {
           console.log(result)
