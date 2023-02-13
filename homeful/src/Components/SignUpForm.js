@@ -50,7 +50,7 @@ const navigate = useNavigate()
         setSex(e.target.value)
     }
 
-    function handleSISubmit(e) {
+    async function handleSISubmit(e) {
         e.preventDefault()
         if (password !== confirmPassword) {
             alert('Passwords do not match');
@@ -83,7 +83,7 @@ const navigate = useNavigate()
                 headers: { 'Content-Type': 'application/json' },
                 body: raw
             };
-            fetch('http://backend-deployment-production.up.railway.app0/user/', requestOptions)
+            let info = await fetch('http://backend-deployment-production.up.railway.app/user/', requestOptions)
                 .then(response => response.json())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));

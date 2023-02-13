@@ -18,7 +18,7 @@ function ProfilePage() {
 
     useEffect(() => {
         async function allRooms() {
-            let info = await fetch(`http://backend-deployment-production.up.railway.app0/rooms/${id}`)
+            let info = await fetch(`http://backend-deployment-production.up.railway.app/rooms/${id}`)
                 .then(response => {
                     if (response.ok) {
                         return response.json();

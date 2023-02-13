@@ -94,7 +94,7 @@ export default function AccamodForm(){
       headers: { 'Content-Type': 'application/json' },
       body: raw
   };
-  fetch('http://backend-deployment-production.up.railway.app0/rooms/',requestOptions)
+  fetch('http://backend-deployment-production.up.railway.app/rooms/',requestOptions)
   .then(response => response.json())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));

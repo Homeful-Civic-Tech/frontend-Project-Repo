@@ -38,7 +38,7 @@ export default function ShelterBtn() {
         headers: { 'Content-Type': 'application/json' },
         body: raw
     };
-    fetch('http://backend-deployment-production.up.railway.app0/shelters/add',requestOptions)
+    fetch('http://backend-deployment-production.up.railway.app/shelters/add',requestOptions)
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));

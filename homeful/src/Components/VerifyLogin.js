@@ -14,7 +14,7 @@ export default function VerifyLogin(){
 
     // useEffect(() => {
     //     async function load(){
-    //     await fetch(`http://backend-deployment-production.up.railway.app0/user/login/${userName}/${password}`)
+    //     await fetch(`http://backend-deployment-production.up.railway.app/user/login/${userName}/${password}`)
     //     .then(res => {
     //         if(!res.ok){
     //             throw(res)
