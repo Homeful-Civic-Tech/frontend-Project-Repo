@@ -27,7 +27,7 @@ export default function LogIn() {
             "password": passwords
         };
 
-        let logindata = await fetch(`http://backend-deployment-production.up.railway.app/user/login/${data.username}/${data.password}`)
+        let logindata = await fetch(`http://localhost:4109/user/login/${data.username}/${data.password}`)
             .then(result => result.json())
             .then(datas => {
                 handleLoginChange(datas) 

@@ -15,7 +15,7 @@ function FeedsPage(){
   const [searchInfo, setSearchInfo] = useState('')
   
     async function allRooms () {
-      let info = await fetch('http://backend-deployment-production.up.railway.app/rooms/')
+      let info = await fetch('http://localhost:4109/rooms/')
         .then(response => {
           if (response.ok){
             return response.json()
@@ -27,7 +27,7 @@ function FeedsPage(){
       }
        
      async function allShelters () {
-     let info = await fetch('http://backend-deployment-production.up.railway.app/shelters/')
+     let info = await fetch('http://localhost:4109/shelters/')
       .then(response => {
         if (response.ok){
           return response.json()
@@ -45,14 +45,14 @@ function FeedsPage(){
     allShelters()
 
     }else if(searchInfo!='search') {
-    let shelterInfo = await fetch(`http://backend-deployment-production.up.railway.app/shelters/search/${searchInfo}`)
+    let shelterInfo = await fetch(`http://localhost:4109/shelters/search/${searchInfo}`)
     .then(response => {
       if (response.ok){
         return response.json()
       }
       throw response
     })
-    let roomInfo = await fetch(`http://backend-deployment-production.up.railway.app/rooms/search/${searchInfo}`)
+    let roomInfo = await fetch(`http://localhost:4109/rooms/search/${searchInfo}`)
     .then(response => {
       if (response.ok){
         return response.json()
@@ -71,14 +71,14 @@ function FeedsPage(){
       
  async function getcategory (category){
   setSearchInfo('search')
-  let shelterInfo = await fetch(`http://backend-deployment-production.up.railway.app/shelters/category/${category}`)
+  let shelterInfo = await fetch(`http://localhost:4109/shelters/category/${category}`)
     .then(response => {
       if (response.ok){
         return response.json()
       }
       throw response
     })
-    let roomInfo = await fetch(`http://backend-deployment-production.up.railway.app/rooms/category/${category}`)
+    let roomInfo = await fetch(`http://localhost:4109/rooms/category/${category}`)
     .then(response => {
       if (response.ok){
         return response.json()

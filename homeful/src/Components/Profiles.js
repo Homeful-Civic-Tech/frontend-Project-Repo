@@ -18,7 +18,7 @@ function ProfilePage (){
 
     useEffect(()=>{
      async function allShelters () {
-     let info = await fetch(`http://backend-deployment-production.up.railway.app/shelters/${id}`)
+     let info = await fetch(`http://localhost:4109/shelters/${id}`)
       .then(response => {
         if (response.ok){
           return response.json()

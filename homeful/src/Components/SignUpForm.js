@@ -83,7 +83,7 @@ const navigate = useNavigate()
                 headers: { 'Content-Type': 'application/json' },
                 body: raw
             };
-            let info = await fetch('http://backend-deployment-production.up.railway.app/user/', requestOptions)
+            let info = await fetch('http://localhost:4109/user/', requestOptions)
                 .then(response => response.json())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
